@@ -2,3 +2,173 @@
 Starting SFCADMIN on 17/01/2020 at  5:48:47.46
 ----------------------------------------------
  
+==================================================================================================
+ 6:01:32.63: PROD MENU: S2 selected to run options 6-13....
+--------------------------------------------------------
+ 6:01:34.16: Update sfcoffline html page - date and time
+--------------------------------------------------------
+ 6:01:49.94: Update sfcoffline html page - date and time completed
+----------------------------------------------------
+ 6:01:52.15: Check current users on Google Analytics
+----------------------------------------------------
+ 6:01:57.34: Check current users on Google Analytics completed
+-------------------------------------
+ 6:01:59.22: Push offline application
+-------------------------------------
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+Using manifest file manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                sfcoffline
+  path:                C:\Projects\SfC\Repos\SFC-Offline
+  buildpacks:
+    https://github.com/cloudfoundry/staticfile-buildpack.git
+  command:             $HOME/boot.sh
+  disk quota:          1G
+  health check type:   port
+  instances:           1
+  memory:              1G
+  stack:               cflinuxfs3
+  routes:
+    sfcoffline.cloudapps.digital
+
+Updating app sfcoffline...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 1.89 KiB    0.00% 1.89 KiB / 1.89 KiB  100.00% 1.89 KiB / 1.89 KiB  100.00% 1.89 KiB / 1.89 KiB  100.00% 1.89 KiB / 1.89 KiB  100.00% 1.89 KiB / 1.89 KiB  100.00% 1.89 KiB / 1.89 KiB  100.00% 1s
+
+Waiting for API to complete processing files...
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 creating container for instance ad2b3061-7fc5-4497-8d65-b6b84d787b47
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 successfully created container for instance ad2b3061-7fc5-4497-8d65-b6b84d787b47
+   Downloading build artifacts cache...
+   Downloading app package...
+   Downloaded app package (1.9K)
+   Downloaded build artifacts cache (2M)
+   -----> Download go 1.12.4
+   -----> Running go build supply
+   /tmp/buildpackdownloads/49e489d3547d6eb82fdd6227f8309290 ~
+   ~
+   -----> Staticfile Buildpack version 1.5.3
+   -----> Installing nginx
+          Using nginx version 1.17.7
+   -----> Installing nginx 1.17.7
+          Copy [/tmp/cache/final/dependencies/32cc367f42403d1b44d4cc0430b0bc4dcee0dbaf8880e300be83f80894a77af8/nginx-1.17.7-linux-x64-cflinuxfs3-2197ee1f.tgz]
+   -----> Running go build finalize
+   /tmp/buildpackdownloads/49e489d3547d6eb82fdd6227f8309290 ~
+   ~
+   -----> Root folder /tmp/app
+   -----> Copying project files into public
+   -----> Configuring nginx
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (2M)
+   Uploaded droplet (2M)
+   Uploading complete
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 stopping instance ad2b3061-7fc5-4497-8d65-b6b84d787b47
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 destroying container for instance ad2b3061-7fc5-4497-8d65-b6b84d787b47
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 successfully destroyed container for instance ad2b3061-7fc5-4497-8d65-b6b84d787b47
+
+Waiting for app to start...
+
+name:              sfcoffline
+requested state:   started
+routes:            sfcoffline.cloudapps.digital
+last uploaded:     Fri 17 Jan 06:03:31 GMT 2020
+stack:             cflinuxfs3
+buildpacks:        staticfile
+
+type:            web
+instances:       1/1
+memory usage:    1024M
+start command:   $HOME/boot.sh
+     state     since                  cpu    memory    disk      details
+#0   running   2020-01-17T06:03:43Z   0.0%   0 of 1G   0 of 1G   
+
+ 6:03:47.89: Push offline application completed
+-----------------------------------------------------
+ 6:03:49.19: Switch route from sfcuatblue to offline
+-----------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+ 6:04:18.83: Switch route from sfcuatblue to offline completed
+---------------------------------------------------
+ 6:04:20.36: Stop sfcuatblue and start sfcuatgreen
+---------------------------------------------------
+Stopping app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+ 6:04:35.13: Checking if database patches to be applied to sfcuatdb02
+ 6:04:39.45: Database patches applied to sfcuatdb01
+Starting app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+
+Waiting for app to start...
+
+name:              sfcuatgreen
+requested state:   started
+routes:            sfcuatgreen.cloudapps.digital
+last uploaded:     Thu 16 Jan 17:34:30 GMT 2020
+stack:             cflinuxfs3
+buildpacks:        nodejs
+
+type:            web
+instances:       2/10
+memory usage:    8192M
+start command:   npm start
+     state      since                  cpu      memory         disk         details
+#0   starting   2020-01-17T06:05:21Z   168.3%   605.6M of 8G   1.3G of 4G   
+#1   running    2020-01-17T06:06:15Z   180.0%   617M of 8G     1.3G of 4G   
+#2   starting   2020-01-17T06:05:21Z   190.3%   460.3M of 8G   1.3G of 4G   
+#3   starting   2020-01-17T06:05:21Z   174.4%   606.4M of 8G   1.3G of 4G   
+#4   starting   2020-01-17T06:05:21Z   148.8%   785.4M of 8G   1.3G of 4G   
+#5   running    2020-01-17T06:06:16Z   158.5%   705.5M of 8G   1.3G of 4G   
+#6   starting   2020-01-17T06:05:21Z   174.1%   594M of 8G     1.3G of 4G   
+#7   starting   2020-01-17T06:05:21Z   183.2%   501M of 8G     1.3G of 4G   
+#8   starting   2020-01-17T06:05:21Z   169.9%   611M of 8G     1.3G of 4G   
+#9   starting   2020-01-17T06:05:21Z   152.7%   691.8M of 8G   1.3G of 4G   
+ 6:06:23.52: Stop sfcuatblue and start sfcuatgreen completed
+--------------------------------------------------------
+ 6:06:25.21: Switch Route from sfcoffline to sfcuatgreen
+--------------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+ 6:11:30.98: Switch Route from sfcoffline to sfcuatgreen completed
+----------------------------
+ 6:11:33.20: Stop sfcoffline
+----------------------------
+Stopping app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+ 6:14:30.13: Stop sfcoffline completed
+------------------------------------------------------------
+ 6:14:32.18: Remove Route cloudapps.digital from sfcuatgreen
+------------------------------------------------------------
+Removing route sfcuatgreen.cloudapps.digital from app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+ 6:14:40.15: Remove Route cloudapps.digital from sfcuatgreen completed
+ 6:14:42.15: PROD MENU: Options 6-13 completed
