@@ -2199,3 +2199,7 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
 #0   running   2020-01-31 01:32:57 PM   134.0%   674.8M of 1G   1.3G of 2G
 13:33:06.03: Push application to sfcanalysis completed
 13:33:08.11: SANDBOX MENU: Options 1-4 completed
+==================================================================================================
+Starting SFCADMIN on 31/01/2020 at 14:25:22.61
+----------------------------------------------
+ 
