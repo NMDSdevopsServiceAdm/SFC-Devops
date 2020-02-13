@@ -2,3 +2,66 @@
 Starting SFCADMIN on 13/02/2020 at 14:03:30.36
 ----------------------------------------------
  
+==================================================================================================
+17:11:41.99: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+17:11:44.18: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\nodemon\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\@angular\compiler-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 14 packages from 5 contributors and audited 30889 packages in 22.773s
+found 10 vulnerabilities (3 low, 4 moderate, 2 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> ng-sfc-v2@0.0.1 build C:\Projects\SfC\Repos\SopraSteria-SFC
+> ng build  --extract-css
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+
+chunk {common} common.js, common.js.map (common) 16.6 kB  [rendered]
+chunk {default~features-activate-user-account-activate-user-account-module~features-registration-registration-module} default~features-activate-user-account-activate-user-account-module~features-registration-registration-module.js, default~features-activate-user-account-activate-user-account-module~features-registration-registration-module.js.map (default~features-activate-user-account-activate-user-account-module~features-registration-registration-module) 24.8 kB  [rendered]
+chunk {default~features-add-workplace-add-workplace-module~features-registration-registration-module} default~features-add-workplace-add-workplace-module~features-registration-registration-module.js, default~features-add-workplace-add-workplace-module~features-registration-registration-module.js.map (default~features-add-workplace-add-workplace-module~features-registration-registration-module) 16.3 kB  [rendered]
+chunk {default~features-add-workplace-add-workplace-module~features-registration-registration-module~featur~c9acceeb} default~features-add-workplace-add-workplace-module~features-registration-registration-module~featur~c9acceeb.js, default~features-add-workplace-add-workplace-module~features-registration-registration-module~featur~c9acceeb.js.map (default~features-add-workplace-add-workplace-module~features-registration-registration-module~featur~c9acceeb) 69.6 kB  [rendered]
+chunk {features-account-management-account-management-module} features-account-management-account-management-module.js, features-account-management-account-management-module.js.map (features-account-management-account-management-module) 78.8 kB  [rendered]
+chunk {features-activate-user-account-activate-user-account-module} features-activate-user-account-activate-user-account-module.js, features-activate-user-account-activate-user-account-module.js.map (features-activate-user-account-activate-user-account-module) 81.5 kB  [rendered]
+chunk {features-add-workplace-add-workplace-module} features-add-workplace-add-workplace-module.js, features-add-workplace-add-workplace-module.js.map (features-add-workplace-add-workplace-module) 148 kB  [rendered]
+chunk {features-bulk-upload-bulk-upload-module} features-bulk-upload-bulk-upload-module.js, features-bulk-upload-bulk-upload-module.js.map (features-bulk-upload-bulk-upload-module) 165 kB  [rendered]
+chunk {features-notifications-notifications-module} features-notifications-notifications-module.js, features-notifications-notifications-module.js.map (features-notifications-notifications-module) 77 kB  [rendered]
+chunk {features-public-public-module} features-public-public-module.js, features-public-public-module.js.map (features-public-public-module) 88.8 kB  [rendered]
+chunk {features-registration-registration-module} features-registration-registration-module.js, features-registration-registration-module.js.map (features-registration-registration-module) 168 kB  [rendered]
+chunk {features-reports-reports-module} features-reports-reports-module.js, features-reports-reports-module.js.map (features-reports-reports-module) 59.9 kB  [rendered]
+chunk {features-search-search-module} features-search-search-module.js, features-search-search-module.js.map (features-search-search-module) 48.5 kB  [rendered]
+chunk {features-workers-workers-module} features-workers-workers-module.js, features-workers-workers-module.js.map (features-workers-workers-module) 644 kB  [rendered]
+chunk {features-workplace-workplace-module} features-workplace-workplace-module.js, features-workplace-workplace-module.js.map (features-workplace-workplace-module) 409 kB  [rendered]
+chunk {main} main.js, main.js.map (main) 1.02 MB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 565 kB [initial] [rendered]
+chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 474 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 10.5 kB [entry] [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 147 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 6.14 MB [initial] [rendered]
+Date: 2020-02-13T17:13:20.892Z - Hash: 590cce0dbc1280c4e0ba - Time: 45770ms
+
+
+17:13:23.16: npm install and run build completed
+------------------------------------------------------------------
+17:13:25.19: Update database binding for sfcuatblue  to sfcuatdb02
+------------------------------------------------------------------
+17:13:27.22: Current binding for sfcuatblue already sfcuatdb02
+------------------------------------------
+17:13:29.14: Set variables for  sfcuatblue
+------------------------------------------
+17:14:13.14: Set variables for sfcuatblue abandoned - user choice
