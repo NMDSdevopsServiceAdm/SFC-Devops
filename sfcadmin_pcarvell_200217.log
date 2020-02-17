@@ -246,3 +246,21 @@ Starting SFCADMIN on 17/02/2020 at  8:51:53.69
 Starting SFCADMIN on 17/02/2020 at 12:19:01.71
 ----------------------------------------------
  
+==================================================================================================
+12:19:36.90: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+12:19:38.16: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+npm WARN deprecated bcrypt-nodejs@0.0.3: bcrypt-nodejs is no longer actively maintained. Please use bcrypt or bcryptjs. See https://github.com/kelektiv/node.bcrypt.js/wiki/bcrypt-vs-brypt.js to learn more about these two options
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+npm WARN deprecated superagent@3.8.3: Please note that v5.0.1+ of superagent removes User-Agent header by default, therefore you may need to add it yourself (e.g. GitHub blocks requests without a User-Agent header).  This notice will go away with v5.0.2+ once it is released.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+Terminate batch job (Y/N)? ==================================================================================================
+Starting SFCADMIN on 17/02/2020 at 13:01:56.54
+----------------------------------------------
+ 
