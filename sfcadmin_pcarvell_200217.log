@@ -8997,3 +8997,23 @@ OK
 15:30:23.14: Set variables for sfcuatgreen
 ------------------------------------------
 15:30:51.01: Set variables for sfcuatgreen abandoned - user choice
+==================================================================================================
+15:53:55.37: PROD MENU: 11 selected....
+--------------------------------------------------------
+15:53:57.16: Switch Route from sfcoffline to sfcuatgreen
+--------------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+15:54:21.63: Switch Route from sfcoffline to sfcuatgreen completed
