@@ -4316,3 +4316,17 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
 #8   running    2020-02-18 11:56:01 AM   149.5%   974.3M of 8G   1.4G of 4G
 #9   starting   2020-02-18 11:55:04 AM   160.1%   646.8M of 8G   1.3G of 4G
 11:56:15.66: Push application to sfcuatblue completed
+==================================================================================================
+14:12:49.53: PROD MENU: 12 selected....
+----------------------------
+14:12:51.21: Stop sfcoffline
+----------------------------
+Stopping app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as paul.carvell@soprasteria.com...
+OK
+14:12:58.12: Stop sfcoffline completed
+==================================================================================================
+14:13:53.31: PROD MENU: 13 selected....
+------------------------------------------------------------
+14:13:55.22: Remove Route cloudapps.digital from  sfcuatblue
+------------------------------------------------------------
+14:14:03.09: Remove Route cloudapps.digital from sfcuatblue abandoned - user choice
