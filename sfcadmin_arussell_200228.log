@@ -6,3 +6,30 @@ Starting SFCADMIN on 28/02/2020 at 15:34:57.14
 Starting SFCADMIN on 28/02/2020 at 15:40:16.16
 ----------------------------------------------
  
+==================================================================================================
+15:41:11.66: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+15:41:13.15: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+15:41:25.12: npm install and run build completed
+------------------------------------------------------------------
+15:41:27.14: Update database binding for sfcuatblue  to sfcuatdb02
+------------------------------------------------------------------
+15:41:29.14: Current binding for sfcuatblue already sfcuatdb02
+------------------------------------------
+15:41:31.13: Set variables for  sfcuatblue
+------------------------------------------
+15:41:37.97: Set variables for sfcuatblue abandoned - user choice
+==================================================================================================
+Starting SFCADMIN on 28/02/2020 at 15:49:43.41
+----------------------------------------------
+ 
