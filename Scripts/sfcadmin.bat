@@ -155,7 +155,7 @@ ECHO ^+-------------------------------------------------------------------------
 @REM ********************************************************************************************
 
 SET testversion=true
-ECHO   !redbackground!** Not running **!clearbackground! SET testversion=false>nul
+SET testversion=false>nul
 
 IF "!testversion!"=="true" GOTO SKIP_LIVE_WARNING
 
@@ -1241,8 +1241,8 @@ IF "!areyousure!" NEQ "Y" (
     SET /P continue=.!BS!  Press enter to continue: 
     GOTO PREPROD_MENU)
 
-ECHO   !redbackground!** Not running **!clearbackground! call npm install>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! call npm run build>>!devopslogname! 2>&1
+call npm install>>!devopslogname! 2>&1
+call npm run build>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -1311,9 +1311,9 @@ IF "!areyousure!" NEQ "Y" (
     GOTO PREPROD_MENU)
 
 IF "!preprodcurrentbinding!"=="sfcuatdb01" (
-    ECHO   !redbackground!** Not running **!clearbackground! cf unbind-service !nextactive! sfcuatdb01>>!devopslogname! 2>&1
+    cf unbind-service !nextactive! sfcuatdb01>>!devopslogname! 2>&1
 )
-ECHO   !redbackground!** Not running **!clearbackground! cf bind-service !nextactive! sfcuatdb02>>!devopslogname! 2>&1
+cf bind-service !nextactive! sfcuatdb02>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -1362,7 +1362,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PREPROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf restage !nextactive!>>!devopslogname! 2>&1
+cf restage !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -1534,13 +1534,13 @@ ECHO.
 ECHO %TIME%: Updating cf variables for !extraspace!!nextactive!>>!devopslogname!
 TIMEOUT 2 >nul
 ECHO.
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! AWS_ACCESS_KEY_ID !sfcpresecretid!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! AWS_SECRET_ACCESS_KEY !sfcpresecretkey!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_NAME !dbname!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_USER !dbuser!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! NODE_ENV preproduction
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! SERVER__NAME sfcuat
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_POOL 450
+cf set-env !nextactive! AWS_ACCESS_KEY_ID !sfcpresecretid!
+cf set-env !nextactive! AWS_SECRET_ACCESS_KEY !sfcpresecretkey!
+cf set-env !nextactive! DB_NAME !dbname!
+cf set-env !nextactive! DB_USER !dbuser!
+cf set-env !nextactive! NODE_ENV preproduction
+cf set-env !nextactive! SERVER__NAME sfcuat
+cf set-env !nextactive! DB_POOL 450
 
 ECHO.
 ECHO %TIME%: Set variables for !nextactive! completed>>!devopslogname!
@@ -1978,7 +1978,7 @@ REM ****************************************************************************
 			ECHO ---------------------------------------------------------->>!devopslogname!
 			ECHO Script output>>!devopslogname!
 			ECHO ---------------------------------------------------------->>!devopslogname!
-			ECHO   !redbackground!** Not running **!clearbackground! cf conduit sfcuatdb02 --app-name sfcadmin_sfcuatdb02 -- psql < !scriptname!>>!devopslogname! 2>&1
+			cf conduit sfcuatdb02 --app-name sfcadmin_sfcuatdb02 -- psql < !scriptname!>>!devopslogname! 2>&1
 			ECHO ---------------------------------------------------------->>!devopslogname!
 			TIMEOUT 2 >nul
 			ECHO.
@@ -1997,7 +1997,7 @@ REM ****************************************************************************
 	ECHO.
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf push -f manifest.bluegreen.yml>>!devopslogname! 2>&1
+cf push -f manifest.bluegreen.yml>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -2515,9 +2515,9 @@ IF "!areyousure!" NEQ "Y" (
     GOTO PROD_MENU)
 
 IF "!preprodcurrentbinding!"=="sfcuatdb02" (
-    ECHO   !redbackground!** Not running **!clearbackground! cf unbind-service !nextactive! sfcuatdb02>>!devopslogname! 2>&1
+    cf unbind-service !nextactive! sfcuatdb02>>!devopslogname! 2>&1
 )
-ECHO   !redbackground!** Not running **!clearbackground! cf bind-service !nextactive! sfcuatdb01>>!devopslogname! 2>&1
+cf bind-service !nextactive! sfcuatdb01>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -2567,7 +2567,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf restage !nextactive!>>!devopslogname! 2>&1
+cf restage !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -2739,13 +2739,13 @@ ECHO.
 ECHO %TIME%: Updating cf variables for !extraspace!!nextactive!>>!devopslogname!
 TIMEOUT 2 >nul
 ECHO.
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! AWS_ACCESS_KEY_ID !sfcprodsecretid!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! AWS_SECRET_ACCESS_KEY !sfcprodsecretkey!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_NAME !dbname!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_USER !dbuser!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! NODE_ENV production
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! SERVER__NAME sfcuat
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_POOL 450
+cf set-env !nextactive! AWS_ACCESS_KEY_ID !sfcprodsecretid!
+cf set-env !nextactive! AWS_SECRET_ACCESS_KEY !sfcprodsecretkey!
+cf set-env !nextactive! DB_NAME !dbname!
+cf set-env !nextactive! DB_USER !dbuser!
+cf set-env !nextactive! NODE_ENV production
+cf set-env !nextactive! SERVER__NAME sfcuat
+cf set-env !nextactive! DB_POOL 450
 ECHO.
 
 ECHO %TIME%: Set variables for !nextactive! completed>>!devopslogname!
@@ -2793,7 +2793,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf restage !nextactive!>>!devopslogname! 2>&1
+cf restage !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 ECHO   **********************************************
@@ -2855,7 +2855,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf stop !nextactive!>>!devopslogname! 2>&1
+cf stop !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -2999,10 +2999,10 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cd !sfcofflineapp!
-ECHO   !redbackground!** Not running **!clearbackground! cf push -f manifest.yml>>!devopslogname! 2>&1
+cd !sfcofflineapp!
+cf push -f manifest.yml>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
-ECHO   !redbackground!** Not running **!clearbackground! cd !sfcliveapp!
+cd !sfcliveapp!
 
 ECHO.
 ECHO   *********************************************
@@ -3067,10 +3067,10 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route !previousactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route !previousactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf map-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf map-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf unmap-route !previousactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf unmap-route !previousactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -3135,7 +3135,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf stop !previousactive!>>!devopslogname! 2>&1
+cf stop !previousactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -3216,7 +3216,7 @@ REM ****************************************************************************
 			ECHO ---------------------------------------------------------->>!devopslogname!
 			ECHO Script output>>!devopslogname!
 			ECHO ---------------------------------------------------------->>!devopslogname!
-			ECHO   !redbackground!** Not running **!clearbackground! cf conduit sfcuatdb01 --app-name sfcadmin_sfcuatdb01 -- psql < !scriptname!>>!devopslogname! 2>&1
+			cf conduit sfcuatdb01 --app-name sfcadmin_sfcuatdb01 -- psql < !scriptname!>>!devopslogname! 2>&1
 			ECHO ---------------------------------------------------------->>!devopslogname!
 			TIMEOUT 2 >nul
 			ECHO.
@@ -3235,7 +3235,7 @@ REM ****************************************************************************
 	ECHO.
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf start !nextactive!>>!devopslogname! 2>&1
+cf start !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -3302,10 +3302,10 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route !nextactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route !nextactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf map-route !nextactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf map-route !nextactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf unmap-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf unmap-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -3368,7 +3368,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf stop sfcoffline>>!devopslogname! 2>&1
+cf stop sfcoffline>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -3429,7 +3429,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route !nextactive! cloudapps.digital -n !nextactive!>>!devopslogname! 2>&1
+cf unmap-route !nextactive! cloudapps.digital -n !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -3868,14 +3868,14 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cd !sfcemergencyapp!>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf push -f manifest.yml>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cd !sfcliveapp!>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route !previousactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route !previousactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf stop !previousactive!>>!devopslogname! 2>&1
+cd !sfcemergencyapp!>>!devopslogname! 2>&1
+cf push -f manifest.yml>>!devopslogname! 2>&1
+cd !sfcliveapp!>>!devopslogname! 2>&1
+cf map-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf map-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf unmap-route !previousactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf unmap-route !previousactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf stop !previousactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -3974,9 +3974,9 @@ IF "!areyousure!" NEQ "Y" (
     GOTO PROD_EMERGENCY_MENU)
 
 IF "!preprodcurrentbinding!"=="sfcuatdb02" (
-    ECHO   !redbackground!** Not running **!clearbackground! cf unbind-service !nextactive! sfcuatdb02>>!devopslogname! 2>&1
+    cf unbind-service !nextactive! sfcuatdb02>>!devopslogname! 2>&1
 )
-ECHO   !redbackground!** Not running **!clearbackground! cf bind-service !nextactive! sfcuatdb01>>!devopslogname! 2>&1
+cf bind-service !nextactive! sfcuatdb01>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -4025,7 +4025,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf restage !nextactive!>>!devopslogname! 2>&1
+cf restage !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -4196,13 +4196,13 @@ ECHO.
 ECHO %TIME%: Updating cf variables for !extraspace!!nextactive!>>!devopslogname!
 TIMEOUT 2 >nul
 ECHO.
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! AWS_ACCESS_KEY_ID !sfcprodsecretid!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! AWS_SECRET_ACCESS_KEY !sfcprodsecretkey!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_NAME !dbname!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_USER !dbuser!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! NODE_ENV production
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! SERVER__NAME sfcuat
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env !nextactive! DB_POOL 450
+cf set-env !nextactive! AWS_ACCESS_KEY_ID !sfcprodsecretid!
+cf set-env !nextactive! AWS_SECRET_ACCESS_KEY !sfcprodsecretkey!
+cf set-env !nextactive! DB_NAME !dbname!
+cf set-env !nextactive! DB_USER !dbuser!
+cf set-env !nextactive! NODE_ENV production
+cf set-env !nextactive! SERVER__NAME sfcuat
+cf set-env !nextactive! DB_POOL 450
 ECHO.
 
 ECHO %TIME%: Set variables for !nextactive! completed>>!devopslogname!
@@ -4250,7 +4250,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf restage !nextactive!>>!devopslogname! 2>&1
+cf restage !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -4313,7 +4313,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf start !nextactive!>>!devopslogname! 2>&1
+cf start !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -4380,10 +4380,10 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route !nextactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf map-route !nextactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf map-route !nextactive! cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf map-route !nextactive! skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
+cf unmap-route sfcoffline cloudapps.digital -n sfcuat>>!devopslogname! 2>&1
+cf unmap-route sfcoffline skillsforcare.org.uk -n asc-wds>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -4446,7 +4446,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf stop sfcoffline>>!devopslogname! 2>&1
+cf stop sfcoffline>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
@@ -4507,7 +4507,7 @@ IF "!areyousure!" NEQ "Y" (
 	GOTO PROD_EMERGENCY_MENU
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf unmap-route !nextactive! cloudapps.digital -n !nextactive!>>!devopslogname! 2>&1
+cf unmap-route !nextactive! cloudapps.digital -n !nextactive!>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -4827,8 +4827,8 @@ IF "!areyousure!" NEQ "Y" (
     SET /P continue=.!BS!  Press enter to continue: 
     GOTO SANDBOX_MENU)
 
-ECHO   !redbackground!** Not running **!clearbackground! call npm install>>!devopslogname! 2>&1
-ECHO   !redbackground!** Not running **!clearbackground! call npm run build>>!devopslogname! 2>&1
+call npm install>>!devopslogname! 2>&1
+call npm run build>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -4913,9 +4913,9 @@ IF "!areyousure!" NEQ "Y" (
 ECHO %TIME%: Updating cf variables for sfcanalysis>>!devopslogname!
 TIMEOUT 2 >nul
 ECHO.
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env sfcanalysis AWS_ACCESS_KEY_ID !sfcstagesecretid!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env sfcanalysis AWS_SECRET_ACCESS_KEY !sfcstagesecretkey!
-ECHO   !redbackground!** Not running **!clearbackground! cf set-env sfcanalysis NODE_ENV test
+cf set-env sfcanalysis AWS_ACCESS_KEY_ID !sfcstagesecretid!
+cf set-env sfcanalysis AWS_SECRET_ACCESS_KEY !sfcstagesecretkey!
+cf set-env sfcanalysis NODE_ENV test
 
 ECHO.
 ECHO %TIME%: Set variables for sfcanalysis completed>>!devopslogname!
@@ -5296,7 +5296,7 @@ IF "!areyousure!"=="Y" (
 	ECHO.
 )
 
-ECHO   !redbackground!** Not running **!clearbackground! cf push -f manifest.test.yml>>!devopslogname! 2>&1
+cf push -f manifest.test.yml>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 
 ECHO.
