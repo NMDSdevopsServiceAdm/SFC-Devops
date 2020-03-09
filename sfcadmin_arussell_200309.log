@@ -4369,3 +4369,177 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
 -------------------------------------------
 14:54:16.37: Publish Release 4.1_hotfix1 completed
 14:54:18.17: PREPROD MENU: Options 1-7 completed
+==================================================================================================
+19:00:52.82: PROD MENU: S2 selected to run options 6-14....
+--------------------------------------------------------
+19:00:54.19: Update sfcoffline html page - date and time
+--------------------------------------------------------
+19:01:21.22: Update sfcoffline html page - date and time completed
+----------------------------------------------------
+19:01:23.21: Check current users on Google Analytics
+----------------------------------------------------
+19:01:28.02: Check current users on Google Analytics completed
+-------------------------------------
+19:01:30.20: Push offline application
+-------------------------------------
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+Using manifest file C:\Users\arussell\Documents\Repos\SFC-Offline\manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                sfcoffline
+  path:                C:\Users\arussell\Documents\Repos\SFC-Offline
+  buildpacks:
+    https://github.com/cloudfoundry/staticfile-buildpack.git
+  command:             $HOME/boot.sh
+  disk quota:          1G
+  health check type:   port
+  instances:           1
+  memory:              1G
+  stack:               cflinuxfs3
+  routes:
+    sfcoffline.cloudapps.digital
+
+Updating app sfcoffline...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 923 B    0.00% 923 B / 923 B  100.00% 923 B / 923 B  100.00% 923 B / 923 B  100.00% 923 B / 923 B  100.00% 923 B / 923 B  100.00% 923 B / 923 B  100.00% 923 B / 923 B  100.00% 1s
+
+Waiting for API to complete processing files...
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 creating container for instance 3073aebc-86bd-494f-a5a7-bbbdca9145c4
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 successfully created container for instance 3073aebc-86bd-494f-a5a7-bbbdca9145c4
+   Downloading build artifacts cache...
+   Downloading app package...
+   Downloaded app package (923B)
+   Downloaded build artifacts cache (2M)
+   -----> Download go 1.12.4
+   -----> Running go build supply
+   /tmp/buildpackdownloads/49e489d3547d6eb82fdd6227f8309290 ~
+   ~
+   -----> Staticfile Buildpack version 1.5.5
+          [31;1m**WARNING**[0m buildpack version changed from 1.5.4 to 1.5.5
+   -----> Installing nginx
+          Using nginx version 1.17.9
+   -----> Installing nginx 1.17.9
+          Download [https://buildpacks.cloudfoundry.org/dependencies/nginx-static/nginx-1.17.9-linux-x64-cflinuxfs3-d122d80d.tgz]
+   -----> Running go build finalize
+   /tmp/buildpackdownloads/49e489d3547d6eb82fdd6227f8309290 ~
+   ~
+   -----> Enabling custom pages for status_codes
+   -----> Root folder /tmp/app
+   -----> Copying project files into public
+   -----> Configuring nginx
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (2M)
+   Uploaded droplet (2M)
+   Uploading complete
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 stopping instance 3073aebc-86bd-494f-a5a7-bbbdca9145c4
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 destroying container for instance 3073aebc-86bd-494f-a5a7-bbbdca9145c4
+
+Waiting for app to start...
+
+name:              sfcoffline
+requested state:   started
+routes:            sfcoffline.cloudapps.digital
+last uploaded:     Mon 09 Mar 19:02:30 GMT 2020
+stack:             cflinuxfs3
+buildpacks:        staticfile
+
+type:            web
+instances:       1/1
+memory usage:    1024M
+start command:   $HOME/boot.sh
+     state     since                  cpu    memory    disk      details
+#0   running   2020-03-09T19:02:42Z   0.0%   0 of 1G   0 of 1G   
+
+19:02:50.57: Push offline application completed
+-----------------------------------------------------
+19:02:52.15: Switch route from sfcuatblue to offline
+-----------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+19:03:13.95: Switch route from sfcuatblue to offline completed
+---------------------------------------------------
+19:03:15.15: Stop sfcuatblue and start sfcuatgreen
+---------------------------------------------------
+Stopping app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+19:03:26.18: Checking if database patches to be applied to sfcuatdb01
+Starting app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+
+Waiting for app to start...
+
+name:              sfcuatgreen
+requested state:   started
+routes:            sfcuatgreen.cloudapps.digital
+last uploaded:     Mon 09 Mar 16:36:52 GMT 2020
+stack:             cflinuxfs3
+buildpacks:        nodejs
+
+type:            web
+instances:       2/10
+memory usage:    8192M
+start command:   npm start
+     state      since                  cpu      memory          disk         details
+#0   starting   2020-03-09T19:03:38Z   140.2%   1017.1M of 8G   1.3G of 4G   
+#1   running    2020-03-09T19:04:33Z   166.4%   759.7M of 8G    1.3G of 4G   
+#2   starting   2020-03-09T19:03:38Z   134.9%   1.1G of 8G      1.3G of 4G   
+#3   starting   2020-03-09T19:03:38Z   157.8%   871.7M of 8G    1.3G of 4G   
+#4   starting   2020-03-09T19:03:38Z   162.9%   708M of 8G      1.3G of 4G   
+#5   running    2020-03-09T19:04:33Z   140.3%   1.1G of 8G      1.3G of 4G   
+#6   starting   2020-03-09T19:03:38Z   162.5%   754.6M of 8G    1.3G of 4G   
+#7   starting   2020-03-09T19:03:38Z   167.2%   540.6M of 8G    1.3G of 4G   
+#8   starting   2020-03-09T19:03:38Z   163.2%   801.2M of 8G    1.3G of 4G   
+#9   starting   2020-03-09T19:03:38Z   167.7%   740.8M of 8G    1.3G of 4G   
+19:04:42.18: Stop sfcuatblue and start sfcuatgreen completed
+--------------------------------------------------------
+19:04:44.17: Switch Route from sfcoffline to sfcuatgreen
+--------------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+19:08:31.34: Switch Route from sfcoffline to sfcuatgreen completed
+----------------------------
+19:08:33.18: Stop sfcoffline
+----------------------------
+Stopping app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+19:08:55.17: Stop sfcoffline completed
+------------------------------------------------------------
+19:08:57.17: Remove Route cloudapps.digital from sfcuatgreen
+------------------------------------------------------------
+Removing route sfcuatgreen.cloudapps.digital from app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+19:09:43.22: Remove Route cloudapps.digital from sfcuatgreen completed
+--------------------------------------
+19:09:45.20: Publish Release to Github
+--------------------------------------
+19:09:54.18: Publish Release completed
+19:09:56.15: PROD MENU: Options 6-14 completed
