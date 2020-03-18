@@ -2,3 +2,43 @@
 Starting SFCADMIN on 18/03/2020 at 15:12:47.65
 ----------------------------------------------
  
+==================================================================================================
+15:14:18.34: SANDBOX MENU: 6 selected....
+--------------------------------
+15:14:18.34: Update Staging Certs
+--------------------------------
+15:19:38.77: Update Certs completed
+==================================================================================================
+15:19:47.66: SANDBOX MENU: 6 selected....
+--------------------------------
+15:19:47.66: Update Staging Certs
+--------------------------------
+15:21:03.84: Update Certs completed
+==================================================================================================
+15:45:56.93: SANDBOX MENU: 1 selected....
+-----------------------------------------
+15:45:59.18: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+15:46:07.15: npm install and run build abandoned - current Branch is not test
+==================================================================================================
+15:46:52.23: SANDBOX MENU: 2 selected....
+------------------------------------------
+15:46:54.17: Set variables for sfcanalysis
+------------------------------------------
+15:47:25.17: Set variables for sfcanalysis abandoned - user choice
+==================================================================================================
+15:47:31.27: SANDBOX MENU: 3 selected....
+-------------------------------------------
+15:47:33.22: Update configs for sfcanalysis
+-------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+15:47:40.13: Update configs for sfcanalysis abandoned - current Branch is not test
