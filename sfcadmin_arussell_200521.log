@@ -2254,3 +2254,7 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
 -------------------------------------------
 11:49:37.01: Publish Release 3.3 completed
 11:49:39.19: PREPROD MENU: Options 1-7 completed
+==================================================================================================
+Starting SFCADMIN on 21/05/2020 at 16:42:20.99
+----------------------------------------------
+ 
