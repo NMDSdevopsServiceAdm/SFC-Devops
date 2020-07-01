@@ -2,3 +2,250 @@
 Starting SFCADMIN on 01/07/2020 at 16:44:29.52
 ----------------------------------------------
  
+==================================================================================================
+16:45:12.24: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+16:45:14.12: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   manifest.bluegreen.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+16:45:20.25: npm install and run build abandoned - current Branch is not clean
+==================================================================================================
+16:45:39.17: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+16:45:41.15: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   manifest.bluegreen.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+16:45:47.29: npm install and run build proceeding but current Branch is not clean
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/common@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/platform-browser@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/animations@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/router@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/core@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN angulartics2@7.5.2 requires a peer of @angular/common@>=6.0.0 <9.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN angulartics2@7.5.2 requires a peer of @angular/core@>=6.0.0 <9.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\watchpack-chokidar2\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 24 packages from 7 contributors, removed 4 packages, updated 5 packages and audited 2829 packages in 18.443s
+
+70 packages are looking for funding
+  run `npm fund` for details
+
+found 4 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> ng-sfc-v2@0.0.1 build:prod C:\Users\arussell\Documents\Repos\ASC-WDS-Deployment
+> npm run build:clean && ng build --extract-css --prod
+
+
+> ng-sfc-v2@0.0.1 build:clean C:\Users\arussell\Documents\Repos\ASC-WDS-Deployment
+> rimraf dist
+
+
+chunk {} common.bc534afdf01ddfccb1d7.js (common) 14 kB  [rendered]
+chunk {1} 1.a930d30538ea7f687c3e.js () 39.7 kB  [rendered]
+chunk {2} runtime.b9b3ddc07e6fd16cd200.js (runtime) 2.56 kB [entry] [rendered]
+chunk {3} 3.15f6adb1957e52f6b97d.js () 22.2 kB  [rendered]
+chunk {4} 4.e9717e4e4c15f34f0a2d.js () 234 kB  [rendered]
+chunk {5} main.5b017827a1dd4e71975e.js (main) 1.38 MB [initial] [rendered]
+chunk {6} polyfills.02430b3e14d8d0d69bc3.js (polyfills) 104 kB [initial] [rendered]
+chunk {7} polyfills-es5.ed1719be34efaddfef6f.js (polyfills-es5) 187 kB [initial] [rendered]
+chunk {8} styles.72004390dea3c5df7cff.css (styles) 116 kB [initial] [rendered]
+chunk {9} 9.8531ef5f49edc817f30a.js () 27.1 kB  [rendered]
+chunk {10} 10.ec6d6cab783250fc342e.js () 173 kB  [rendered]
+chunk {11} 11.b99e8d6169af6655a728.js () 23.4 kB  [rendered]
+chunk {12} 12.b1e4dc23e45bb6128166.js () 26.7 kB  [rendered]
+chunk {13} 13.3f7cd4e895f6126247cc.js () 57.8 kB  [rendered]
+chunk {14} 14.359e7567bd249deb2edc.js () 62.3 kB  [rendered]
+chunk {15} 15.fd9b1099678b10590f98.js () 35.8 kB  [rendered]
+chunk {16} 16.a4c51e1cdf0431bf544c.js () 54.5 kB  [rendered]
+chunk {17} 17.406e88b91240a59f12c0.js () 66 kB  [rendered]
+chunk {18} 18.4f7822045f92e00d1681.js () 20.2 kB  [rendered]
+Date: 2020-07-01T15:48:19.688Z - Hash: d6db545b9676c5136941 - Time: 82770ms
+
+
+16:48:22.22: npm install and run build completed
+------------------------------------------------------------------
+16:48:24.20: Update database binding for sfcuatblue  to sfcuatdb02
+------------------------------------------------------------------
+16:48:26.18: Current binding for sfcuatblue already sfcuatdb02
+------------------------------------------
+16:48:28.15: Set variables for  sfcuatblue
+------------------------------------------
+16:48:57.22: Updating AWS Secrets for PREPROD/API
+16:50:14.27: Updating cf variables for  sfcuatblue
+16:50:24.30: Set variables for sfcuatblue completed
+-----------------------------------------------------------
+16:50:26.16: Update manifest.bluegreen.yml with  sfcuatblue
+-----------------------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   manifest.bluegreen.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+16:50:31.07: Update manifest.bluegreen.yml with sfcuatblue proceeding but current Branch is not clean
+16:50:42.98: Update manifest.bluegreen.yml with sfcuatblue completed
+--------------------------------------------
+16:50:45.18: Push application to  sfcuatblue
+--------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   manifest.bluegreen.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+16:50:51.29: Push application to sfcuatblue proceeding but current Branch is not clean
+Latest commit:
+ 
+*   commit 5e0a4ac1d6b5e866897ff839968e241d90908dea
+|\  Merge: e1152da9 84d25c9b
+| | Author: chadtomkiss-madetech <60967748+chadtomkiss-madetech@users.noreply.github.com>
+| | Date:   Wed Jul 1 16:43:40 2020 +0100
+| | 
+| |     Merge pull request #2286 from NMDSdevopsServiceAdm/test
+| |     
+| |     Test > Live
+ 
+16:51:08.19: Checking if database patches to be applied to sfcuatdb02
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+Using manifest file C:\Users\arussell\Documents\Repos\ASC-WDS-Deployment\manifest.bluegreen.yml
+
+
+Deprecation warning: Specifying app manifest attributes at the top level is deprecated. Found: stack.
+Please see https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#deprecated for alternatives and other app manifest deprecations. This feature will be removed in the future.
+
+
+Using manifest file manifest.bluegreen.yml
+
+Using stack cflinuxfs3...
+OK
+Updating app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+
+Uploading sfcuatblue...
+Uploading app files from: C:\Users\arussell\Documents\Repos\ASC-WDS-Deployment
+Uploading 1.5M, 1743 files
+                             Done uploading
+OK
+
+Stopping app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+
+Starting app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+Cell b89ea5ce-3ffa-4451-8225-aab039a61683 creating container for instance 473c5914-182b-4aaa-bbd5-f0e2963b60ec
+Cell b89ea5ce-3ffa-4451-8225-aab039a61683 successfully created container for instance 473c5914-182b-4aaa-bbd5-f0e2963b60ec
+Downloading build artifacts cache...
+Downloading app package...
+Downloaded app package (2.7M)
+Downloaded build artifacts cache (101.2M)
+-----> Download go 1.9.1
+-----> Running go build supply
+-----> Nodejs Buildpack version 1.6.32
+-----> Installing binaries
+       engines.node (package.json): 10.10.0
+       engines.npm (package.json): 6.4.1
+-----> Installing node 10.10.0
+       Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+       npm 6.4.1 already installed with node
+-----> Installing yarn 1.9.4
+       Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+       Installed yarn 1.9.4
+-----> Creating runtime environment
+       [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+       Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+       NODE_ENV=preproduction
+       NODE_HOME=/tmp/contents258807279/deps/0/node
+       NODE_MODULES_CACHE=true
+       NODE_VERBOSE=false
+       NPM_CONFIG_LOGLEVEL=error
+       NPM_CONFIG_PRODUCTION=true
+       npm scripts will see NODE_ENV=production (not 'preproduction')
+       https://docs.npmjs.com/misc/config#production
+-----> Building dependencies
+       Installing node modules (package.json + package-lock.json)
+> core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+added 569 packages from 592 contributors and audited 2829 packages in 28.855s
+found 4 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+-----> Running go build finalize
+Exit status 0
+Uploading droplet, build artifacts cache...
+Uploading build artifacts cache...
+Uploading droplet...
+Uploaded build artifacts cache (101.2M)
+Uploaded droplet (72.6M)
+Uploading complete
+Cell b89ea5ce-3ffa-4451-8225-aab039a61683 stopping instance 473c5914-182b-4aaa-bbd5-f0e2963b60ec
+Cell b89ea5ce-3ffa-4451-8225-aab039a61683 destroying container for instance 473c5914-182b-4aaa-bbd5-f0e2963b60ec
+Cell b89ea5ce-3ffa-4451-8225-aab039a61683 successfully destroyed container for instance 473c5914-182b-4aaa-bbd5-f0e2963b60ec
+
+0 of 10 instances running, 10 starting
+9 of 10 instances running, 1 starting
+
+App started
+
+
+OK
+
+App sfcuatblue was started using this command `npm start`
+
+Showing health and status for app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as aaron.russell@skillsforcare.org.uk...
+OK
+
+requested state: started
+instances: 10/10
+usage: 8G x 10 instances
+urls: sfcuatblue.cloudapps.digital
+last uploaded: Wed Jul 1 15:51:34 UTC 2020
+stack: cflinuxfs3
+buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
+
+     state     since                    cpu    memory         disk           details
+#0   running   2020-07-01 04:53:23 PM   0.0%   151.6M of 8G   423.8M of 4G
+#1   running   2020-07-01 04:53:21 PM   0.0%   152.2M of 8G   423.8M of 4G
+#2   running   2020-07-01 04:53:21 PM   0.0%   43.9M of 8G    423.8M of 4G
+#3   running   2020-07-01 04:53:20 PM   0.0%   43.7K of 8G    8K of 4G
+#4   running   2020-07-01 04:53:26 PM   0.0%   39.8K of 8G    8K of 4G
+#5   running   2020-07-01 04:53:24 PM   0.0%   79.9M of 8G    423.8M of 4G
+#6   running   2020-07-01 04:53:23 PM   0.0%   151.2M of 8G   423.8M of 4G
+#7   running   2020-07-01 04:53:23 PM   0.0%   90.6M of 8G    423.8M of 4G
+#8   running   2020-07-01 04:53:25 PM   0.0%   152.7M of 8G   423.8M of 4G
+#9   running   2020-07-01 04:53:24 PM   0.0%   152.7M of 8G   423.8M of 4G
+16:53:56.68: Push application to sfcuatblue completed
+-------------------------------------------
+16:53:58.16: Create Draft Release on Github
+-------------------------------------------
+16:57:35.11: Publish Release  completed
+16:57:37.18: PREPROD MENU: Options 1-7 completed
