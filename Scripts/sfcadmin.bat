@@ -1226,7 +1226,7 @@ ECHO   This option will run the following:
 
 ECHO.
 ECHO   npm install
-ECHO   npm run build
+ECHO   npm run build:prod
 
 ECHO.
 
@@ -1242,7 +1242,7 @@ IF "!areyousure!" NEQ "Y" (
     GOTO PREPROD_MENU)
 
 call npm install>>!devopslogname! 2>&1
-call npm run build>>!devopslogname! 2>&1
+call npm run build:prod>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
@@ -4812,7 +4812,7 @@ ECHO   This option will run the following:
 
 ECHO.
 ECHO   npm install
-ECHO   npm run build
+ECHO   npm run build:prod
 
 ECHO.
 
@@ -4828,7 +4828,7 @@ IF "!areyousure!" NEQ "Y" (
     GOTO SANDBOX_MENU)
 
 call npm install>>!devopslogname! 2>&1
-call npm run build>>!devopslogname! 2>&1
+call npm run build:prod>>!devopslogname! 2>&1
 TIMEOUT 2 >nul
 ECHO.
 
