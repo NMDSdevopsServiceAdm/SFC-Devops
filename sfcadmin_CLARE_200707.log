@@ -2,3 +2,594 @@
 Starting SFCADMIN on 07/07/2020 at 10:42:36.24
 ----------------------------------------------
  
+==================================================================================================
+10:43:54.59: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+10:43:56.16: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/common@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/platform-browser@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/animations@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/router@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/core@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN angulartics2@7.5.2 requires a peer of @angular/common@>=6.0.0 <9.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN angulartics2@7.5.2 requires a peer of @angular/core@>=6.0.0 <9.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\watchpack-chokidar2\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 51 packages from 77 contributors, removed 3 packages, updated 4 packages and audited 2877 packages in 23.527s
+
+70 packages are looking for funding
+  run `npm fund` for details
+
+found 334 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> ng-sfc-v2@0.0.1 build:prod C:\development\skills-for-care\Deploy-SopraSteria-SFC
+> npm run build:clean && ng build --extract-css --prod
+
+
+> ng-sfc-v2@0.0.1 build:clean C:\development\skills-for-care\Deploy-SopraSteria-SFC
+> rimraf dist
+
+
+chunk {} common.bc534afdf01ddfccb1d7.js (common) 14 kB  [rendered]
+chunk {1} 1.a930d30538ea7f687c3e.js () 39.7 kB  [rendered]
+chunk {2} runtime.115f941a1ea72c4e5460.js (runtime) 2.56 kB [entry] [rendered]
+chunk {3} 3.15f6adb1957e52f6b97d.js () 22.2 kB  [rendered]
+chunk {4} 4.e9717e4e4c15f34f0a2d.js () 234 kB  [rendered]
+chunk {5} main.e4881239d3789ac255db.js (main) 1.38 MB [initial] [rendered]
+chunk {6} polyfills.02430b3e14d8d0d69bc3.js (polyfills) 104 kB [initial] [rendered]
+chunk {7} polyfills-es5.ed1719be34efaddfef6f.js (polyfills-es5) 187 kB [initial] [rendered]
+chunk {8} styles.72004390dea3c5df7cff.css (styles) 116 kB [initial] [rendered]
+chunk {9} 9.8531ef5f49edc817f30a.js () 27.1 kB  [rendered]
+chunk {10} 10.5576ebb642a19fd04fe5.js () 173 kB  [rendered]
+chunk {11} 11.b99e8d6169af6655a728.js () 23.4 kB  [rendered]
+chunk {12} 12.b1e4dc23e45bb6128166.js () 26.7 kB  [rendered]
+chunk {13} 13.3f7cd4e895f6126247cc.js () 57.8 kB  [rendered]
+chunk {14} 14.359e7567bd249deb2edc.js () 62.3 kB  [rendered]
+chunk {15} 15.fd9b1099678b10590f98.js () 35.8 kB  [rendered]
+chunk {16} 16.a4c51e1cdf0431bf544c.js () 54.5 kB  [rendered]
+chunk {17} 17.406e88b91240a59f12c0.js () 66 kB  [rendered]
+chunk {18} 18.4f7822045f92e00d1681.js () 20.2 kB  [rendered]
+Date: 2020-07-07T09:48:05.981Z - Hash: 6228b44f99d6f605a6cb - Time: 161535ms
+
+
+10:48:08.19: npm install and run build completed
+------------------------------------------------------------------
+10:48:10.16: Update database binding for sfcuatgreen to sfcuatdb02
+------------------------------------------------------------------
+10:48:12.14: Current binding for sfcuatgreen already sfcuatdb02
+------------------------------------------
+10:48:14.21: Set variables for sfcuatgreen
+------------------------------------------
+10:48:31.91: Updating AWS Secrets for PREPROD/API
+10:50:25.36: Updating cf variables for sfcuatgreen
+10:50:33.00: Set variables for sfcuatgreen completed
+-----------------------------------------------------------
+10:50:35.19: Update manifest.bluegreen.yml with sfcuatgreen
+-----------------------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   package-lock.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+10:50:41.40: Update manifest.bluegreen.yml with sfcuatgreen proceeding but current Branch is not clean
+11:07:21.98: Update manifest.bluegreen.yml with sfcuatgreen completed
+--------------------------------------------
+11:07:24.18: Push application to sfcuatgreen
+--------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   package-lock.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+11:07:30.47: Push application to sfcuatgreen proceeding but current Branch is not clean
+Latest commit:
+ 
+* commit a39050c1d76dcf63068840dbdb1f4499e00a225f
+| Author: Clare Sudbery <clareworking@claresudbery.co.uk>
+| Date:   Tue Jul 7 11:08:30 2020 +0100
+| 
+|     package-lock change after running npm install during deployment
+ 
+11:11:20.84: Checking if database patches to be applied to sfcuatdb02
+11:11:26.29: Running database script C:\development\skills-for-care\SFC-DB\UAT\Sprint6.patch.sql
+----------------------------------------------------------
+Script: C:\development\skills-for-care\SFC-DB\UAT\Sprint6.patch.sql
+----------------------------------------------------------
+ALTER TABLE cqc."Establishment"
+ADD "LaReportLockHeld" BOOLEAN  NOT NULL DEFAULT FALSE;
+ 
+----------------------------------------------------------
+Script output
+----------------------------------------------------------
+Error: listen tcp 127.0.0.1:7080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+listen tcp 127.0.0.1:7080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+----------------------------------------------------------
+11:11:26.29: Completed C:\development\skills-for-care\SFC-DB\UAT\Sprint6.patch.sql
+11:12:03.93: Running database script C:\development\skills-for-care\SFC-DB\UAT\Sprint6.1.patch.sql
+----------------------------------------------------------
+Script: C:\development\skills-for-care\SFC-DB\UAT\Sprint6.1.patch.sql
+----------------------------------------------------------
+DROP FUNCTION IF EXISTS cqc.localAuthorityReportWorker;
+create function localauthorityreportworker(establishmentid integer, reportfrom date, reportto date) returns boolean
+    language plpgsql
+as
+$$
+DECLARE
+  success BOOLEAN;
+  v_error_msg TEXT;
+  v_error_stack TEXT;
+  AllWorkers REFCURSOR;
+  CurrentWorker RECORD;
+  CalculatedGender TEXT;
+  CalculatedDateOfBirth TEXT;
+  CalculatedEthnicity TEXT;
+  CalculatedMainJobRole TEXT;
+  CalculatedEmploymentStatus TEXT;
+  CalculatedSickDays TEXT;
+  CalculatedPayInterval TEXT;
+  CalculatedPayRate TEXT;
+  CalculatedRelevantSocialCareQualification TEXT;
+  CalculatedHighestSocialCareQualification TEXT;
+  CalculatedNonSocialCareQualification TEXT;
+  CalculatedContractedAverageHours TEXT;
+  CalculatedStaffComplete BOOLEAN := true;
+BEGIN
+  success := true;
+
+  RAISE NOTICE 'localAuthorityReportWorker (%) from % to %', establishmentID, reportFrom, reportTo;
+
+  OPEN AllWorkers FOR
+  SELECT
+    "Establishment"."EstablishmentID" AS "WorkplaceFK",
+    "Establishment"."NameValue" AS "WorkplaceName",
+    "Establishment"."NmdsID" AS "WorkplaceID",
+    "Worker".updated,
+    "Worker"."ID" AS "WorkerID",
+    "Worker"."NameOrIdValue",
+    "Worker"."GenderValue",
+    "Worker"."GenderSavedAt",
+    "Worker"."DateOfBirthValue",
+    "Worker"."DateOfBirthSavedAt",
+    "Ethnicity"."Ethnicity" AS "Ethnicity",
+    "Worker"."EthnicityFKValue",
+    "Worker"."EthnicityFKSavedAt",
+    "Job"."JobName" AS "MainJobRole",
+    "Worker"."MainJobFKValue",
+    "Worker"."MainJobFKSavedAt",
+    "ContractValue",
+    "ContractSavedAt",
+    "WeeklyHoursContractedValue",
+    "WeeklyHoursContractedHours",
+    "WeeklyHoursContractedSavedAt",
+    "WeeklyHoursAverageValue",
+    "WeeklyHoursAverageHours",
+    "WeeklyHoursAverageSavedAt",
+    "ZeroHoursContractValue",
+    "ZeroHoursContractSavedAt",
+    "DaysSickValue",
+    "DaysSickDays",
+    "DaysSickSavedAt",
+    "AnnualHourlyPayValue",
+    "AnnualHourlyPayRate",
+    "AnnualHourlyPaySavedAt",
+    "QualificationInSocialCareValue",
+    "QualificationInSocialCareSavedAt",
+    "Qualification"."Level" AS "QualificationInSocialCare",
+    "SocialCareQualificationFKValue",
+    "SocialCareQualificationFKSavedAt",
+    "OtherQualificationsValue",
+    "OtherQualificationsSavedAt"
+  FROM cqc."Worker"
+    INNER JOIN cqc."Establishment" on "Establishment"."EstablishmentID" = "Worker"."EstablishmentFK" AND "Establishment"."Archived" = false AND ("Establishment"."EstablishmentID" = establishmentID OR "Establishment"."ParentID" = establishmentID)
+    LEFT JOIN cqc."Ethnicity" on "Worker"."EthnicityFKValue" = "Ethnicity"."ID"
+    LEFT JOIN cqc."Job" on "Worker"."MainJobFKValue" = "Job"."JobID"
+    LEFT JOIN cqc."Qualification" on "Worker"."SocialCareQualificationFKValue" = "Qualification"."ID"
+  WHERE
+    "Worker"."Archived" = false;
+
+  LOOP
+    FETCH AllWorkers INTO CurrentWorker;
+    EXIT WHEN NOT FOUND;
+
+    -- RAISE NOTICE 'localAuthorityReportWorker: %, %, %, %, %, % %',
+    -- 	CurrentWorker."NameOrIdValue",
+    -- 	CurrentWorker."Ethnicity",
+    -- 	CurrentWorker."GenderValue",
+    -- 	CurrentWorker.updated,
+    -- 	CurrentWorker."ContractValue",
+    -- 	CurrentWorker."AnnualHourlyPayRate",
+    -- 	CurrentWorker."AnnualHourlyPayRate";
+
+    IF CurrentWorker."GenderValue" IS NULL THEN
+      CalculatedGender := 'Missing';
+    ELSE
+      CalculatedGender := CurrentWorker."GenderValue"::TEXT;
+    END IF;
+
+    IF CurrentWorker."DateOfBirthValue" IS NULL THEN
+      CalculatedDateOfBirth := 'Missing';
+    ELSE
+      CalculatedDateOfBirth := TO_CHAR(CurrentWorker."DateOfBirthValue", 'DD/MM/YYYY');
+    END IF;
+
+    IF CurrentWorker."EthnicityFKValue" IS NULL THEN
+      CalculatedEthnicity := 'Missing';
+    ELSE
+      CalculatedEthnicity := CurrentWorker."Ethnicity";
+    END IF;
+
+    IF CurrentWorker."MainJobFKValue" IS NULL THEN
+      CalculatedMainJobRole := 'Missing';
+    ELSE
+      CalculatedMainJobRole := CurrentWorker."MainJobRole";
+    END IF;
+
+    IF CurrentWorker."ContractValue" IS NULL THEN
+      CalculatedEmploymentStatus := 'Missing';
+    ELSE
+      CalculatedEmploymentStatus := CurrentWorker."ContractValue";
+    END IF;
+
+    IF CurrentWorker."DaysSickValue" IS NULL THEN
+      CalculatedSickDays := 'Missing';
+    ELSE
+      IF CurrentWorker."DaysSickValue" = 'Yes' THEN
+        IF CurrentWorker."DaysSickDays" IS NOT NULL THEN
+          CalculatedSickDays = CurrentWorker."DaysSickDays"::TEXT;
+        ELSE
+          CalculatedSickDays = 'Missing';
+        END IF;
+      ELSIF CurrentWorker."DaysSickValue" = 'No' THEN
+        CalculatedSickDays := 'Don''t know';
+      ELSE
+        CalculatedSickDays := CurrentWorker."DaysSickValue";
+      END IF;
+    END IF;
+
+    IF CurrentWorker."AnnualHourlyPayValue" IS NOT NULL THEN
+      CalculatedPayInterval := CurrentWorker."AnnualHourlyPayValue";
+
+      IF CurrentWorker."AnnualHourlyPayRate" IS NULL OR CurrentWorker."AnnualHourlyPayValue" = 'Don''t know' THEN
+        CalculatedPayRate := 'Missing';
+      ELSE
+        CalculatedPayRate := CurrentWorker."AnnualHourlyPayRate";
+      END IF;
+    ELSE
+      CalculatedPayRate := 'Missing';
+      CalculatedPayInterval := 'Missing';
+    END IF;
+
+    IF CurrentWorker."QualificationInSocialCareValue" IS NOT NULL THEN
+      CalculatedRelevantSocialCareQualification := CurrentWorker."QualificationInSocialCareValue";
+
+      -- the highest social care qualification level is only relevant if knowing the qualification in social care
+      IF CurrentWorker."QualificationInSocialCareValue" = 'Yes' THEN
+        IF CurrentWorker."QualificationInSocialCare" IS NOT NULL THEN
+          CalculatedHighestSocialCareQualification := CurrentWorker."QualificationInSocialCare";
+        ELSE
+          CalculatedHighestSocialCareQualification := 'Missing';
+        END IF;
+      ELSE
+        CalculatedHighestSocialCareQualification := 'n/a';
+      END IF;
+    ELSE
+      CalculatedRelevantSocialCareQualification := 'Missing';
+      CalculatedHighestSocialCareQualification := 'Missing';
+    END IF;
+
+    -- a social worker (27) and an occupational therapist (18) must both have qualifications relevant to social care - override the default checks
+    IF CurrentWorker."MainJobFKValue" IS NOT NULL and CurrentWorker."MainJobFKValue" in (18,27) THEN
+      IF CurrentWorker."QualificationInSocialCareValue" IS NULL OR CurrentWorker."QualificationInSocialCareValue" <> 'Yes' THEN
+        CalculatedRelevantSocialCareQualification := 'Must be yes';
+      END IF;
+      IF CurrentWorker."QualificationInSocialCare" IS NULL THEN
+        CalculatedRelevantSocialCareQualification := 'Must be yes';
+      END IF;
+    END IF;
+
+    IF CurrentWorker."OtherQualificationsValue" IS NULL THEN
+      CalculatedNonSocialCareQualification := 'Missing';
+    ELSE
+      CalculatedNonSocialCareQualification := CurrentWorker."OtherQualificationsValue";
+    END IF;
+
+    -- if contract type is perm/temp contracted hours else average hours
+    IF CurrentWorker."ContractValue" in ('Permanent', 'Temporary') THEN
+      -- if zero hours contractor, then use average hours not contracted hours
+      IF CurrentWorker."ZeroHoursContractValue" IS NOT NULL AND CurrentWorker."ZeroHoursContractValue" = 'Yes' THEN
+        IF  CurrentWorker."ZeroHoursContractValue" = 'Yes' AND CurrentWorker."WeeklyHoursAverageHours" IS NOT NULL THEN
+          CalculatedContractedAverageHours := CurrentWorker."WeeklyHoursAverageHours"::TEXT;
+        ELSIF CurrentWorker."ZeroHoursContractValue" = 'No' THEN
+          CalculatedContractedAverageHours := 'Don''t know';
+        ELSE
+          CalculatedContractedAverageHours := 'Missing';
+        END IF;
+      ELSE
+        IF CurrentWorker."WeeklyHoursContractedValue" = 'Yes' AND CurrentWorker."WeeklyHoursContractedHours" IS NOT NULL THEN
+          CalculatedContractedAverageHours := CurrentWorker."WeeklyHoursContractedHours" ;
+        ELSIF CurrentWorker."WeeklyHoursContractedValue" = 'No' THEN
+          CalculatedContractedAverageHours := 'Don''t know';
+        ELSE
+          CalculatedContractedAverageHours := 'Missing';
+        END IF;
+      END IF;
+    ELSE
+        IF  CurrentWorker."WeeklyHoursAverageValue" = 'Yes' AND CurrentWorker."WeeklyHoursAverageHours" IS NOT NULL THEN
+          CalculatedContractedAverageHours := CurrentWorker."WeeklyHoursAverageHours"::TEXT;
+        ELSIF CurrentWorker."WeeklyHoursAverageValue" = 'No' THEN
+          CalculatedContractedAverageHours := 'Don''t know';
+        ELSE
+          CalculatedContractedAverageHours := 'Missing';
+        END IF;
+    END IF;
+    IF CalculatedContractedAverageHours IS NULL THEN
+      CalculatedContractedAverageHours := 'Missing';
+    END IF;
+
+    -- now calculate worker completion - which for an agency worker only includes just contracted/average hours, main job and the two salary fields
+    CalculatedStaffComplete := true;
+    IF CurrentWorker.updated::DATE < reportFrom THEN
+      -- RAISE NOTICE 'Worker record not been updated';
+      CalculatedStaffComplete := false;
+    END IF;
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedGender in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated gender is NOT valid: %', CalculatedGender;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedDateOfBirth in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated date of birth is NOT valid: %', CalculatedDateOfBirth;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedEthnicity in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated ethnicity is NOT valid: %', CalculatedEthnicity;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedMainJobRole in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated main job role is NOT valid: %', CalculatedMainJobRole;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated contract is NOT valid: %', CalculatedEmploymentStatus;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedSickDays in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated days sick is NOT valid: %', CalculatedSickDays;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedPayInterval in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated pay interval is NOT valid: %', CalculatedPayInterval;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedPayRate in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated pay rate is NOT valid: %', CalculatedPayRate;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedRelevantSocialCareQualification in ('Missing', 'Must be yes')  THEN
+      -- RAISE NOTICE 'calculated relevant social care qualification is NOT valid: %', CalculatedRelevantSocialCareQualification;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedHighestSocialCareQualification in ('Missing', 'Must be yes')  THEN
+      -- RAISE NOTICE 'calculated highest social care qualification is NOT valid: %', CalculatedHighestSocialCareQualification;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedEmploymentStatus <> 'Agency' AND CalculatedNonSocialCareQualification in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated relevant non-social care qualification is NOT valid: %', CalculatedNonSocialCareQualification;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    IF CalculatedContractedAverageHours in ('Missing')  THEN
+      -- RAISE NOTICE 'calculated contracted/average hours is NOT valid: %', CalculatedContractedAverageHours;
+      CalculatedStaffComplete := false;
+    END IF;
+
+    INSERT INTO cqc."LocalAuthorityReportWorker" (
+      "EstablishmentFK",
+      "WorkplaceFK",
+      "WorkerFK",
+      "LocalID",
+      "WorkplaceName",
+      "WorkplaceID",
+      "Gender",
+      "DateOfBirth",
+      "Ethnicity",
+      "MainJob",
+      "EmploymentStatus",
+      "ContractedAverageHours",
+      "SickDays",
+      "PayInterval",
+      "RateOfPay",
+      "RelevantSocialCareQualification",
+      "HighestSocialCareQualification",
+      "NonSocialCareQualification",
+      "LastUpdated",
+      "StaffRecordComplete"
+    ) VALUES (
+      EstablishmentID,
+      CurrentWorker."WorkplaceFK",
+      CurrentWorker."WorkerID",
+      CurrentWorker."NameOrIdValue",
+      CurrentWorker."WorkplaceName",
+      CurrentWorker."WorkplaceID",
+      CalculatedGender,
+      CalculatedDateOfBirth,
+      CalculatedEthnicity,
+      CalculatedMainJobRole,
+      CalculatedEmploymentStatus,
+      CalculatedContractedAverageHours,
+      CalculatedSickDays,
+      CalculatedPayInterval,
+      CalculatedPayRate,
+      CalculatedRelevantSocialCareQualification,
+      CalculatedHighestSocialCareQualification,
+      CalculatedNonSocialCareQualification,
+      CurrentWorker.updated,
+      CalculatedStaffComplete
+    );
+
+  END LOOP;
+
+  RETURN success;
+
+  EXCEPTION WHEN OTHERS THEN
+    GET STACKED DIAGNOSTICS v_error_stack=PG_EXCEPTION_CONTEXT, v_error_msg=MESSAGE_TEXT;
+    RAISE WARNING 'localAuthorityReportWorker: %: %', v_error_msg, v_error_stack;
+    RETURN false;
+
+END;
+$$;
+
+alter function localauthorityreportworker(integer, date, date) owner to sfcadmin;
+
+ 
+----------------------------------------------------------
+Script output
+----------------------------------------------------------
+Error: listen tcp 127.0.0.1:7080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+listen tcp 127.0.0.1:7080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+----------------------------------------------------------
+11:12:03.93: Completed C:\development\skills-for-care\SFC-DB\UAT\Sprint6.1.patch.sql
+11:12:26.11: Database patches applied to sfcuatdb02
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Using manifest file C:\development\skills-for-care\Deploy-SopraSteria-SFC\manifest.bluegreen.yml
+
+
+Deprecation warning: Specifying app manifest attributes at the top level is deprecated. Found: stack.
+Please see https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#deprecated for alternatives and other app manifest deprecations. This feature will be removed in the future.
+
+
+Using manifest file manifest.bluegreen.yml
+
+Using stack cflinuxfs3...
+OK
+Updating app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Uploading sfcuatgreen...
+Uploading app files from: C:\development\skills-for-care\Deploy-SopraSteria-SFC
+Uploading 2.2M, 1755 files
+                             Done uploading
+OK
+
+Stopping app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Starting app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Cell 2d1edfb6-41c5-4fe4-8c03-23a6cc42050c creating container for instance 54a94edb-5b9b-47c4-8ac0-4ceae1ade3f4
+Cell 2d1edfb6-41c5-4fe4-8c03-23a6cc42050c successfully created container for instance 54a94edb-5b9b-47c4-8ac0-4ceae1ade3f4
+Downloading app package...
+Downloading build artifacts cache...
+Downloaded app package (2.7M)
+Downloaded build artifacts cache (101.2M)
+-----> Download go 1.9.1
+-----> Running go build supply
+-----> Nodejs Buildpack version 1.6.32
+-----> Installing binaries
+       engines.node (package.json): 10.10.0
+       engines.npm (package.json): 6.4.1
+-----> Installing node 10.10.0
+       Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+       npm 6.4.1 already installed with node
+-----> Installing yarn 1.9.4
+       Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+       Installed yarn 1.9.4
+-----> Creating runtime environment
+       [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+       Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+       NODE_OPTIONS=--max-old-space-size=8192
+       NODE_ENV=preproduction
+       NODE_HOME=/tmp/contents485723048/deps/0/node
+       NODE_MODULES_CACHE=true
+       NODE_VERBOSE=false
+       NPM_CONFIG_LOGLEVEL=error
+       NPM_CONFIG_PRODUCTION=true
+       npm scripts will see NODE_ENV=production (not 'preproduction')
+       https://docs.npmjs.com/misc/config#production
+-----> Building dependencies
+       Installing node modules (package.json + package-lock.json)
+> core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+added 634 packages from 620 contributors and audited 2877 packages in 16.465s
+found 334 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+-----> Running go build finalize
+Exit status 0
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (107.1M)
+Uploaded droplet (78.7M)
+Uploading complete
+Cell 2d1edfb6-41c5-4fe4-8c03-23a6cc42050c stopping instance 54a94edb-5b9b-47c4-8ac0-4ceae1ade3f4
+Cell 2d1edfb6-41c5-4fe4-8c03-23a6cc42050c destroying container for instance 54a94edb-5b9b-47c4-8ac0-4ceae1ade3f4
+Cell 2d1edfb6-41c5-4fe4-8c03-23a6cc42050c successfully destroyed container for instance 54a94edb-5b9b-47c4-8ac0-4ceae1ade3f4
+
+0 of 10 instances running, 10 starting
+10 of 10 instances running
+
+App started
+
+
+OK
+
+App sfcuatgreen was started using this command `npm start`
+
+Showing health and status for app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+requested state: started
+instances: 10/10
+usage: 8G x 10 instances
+urls: sfcuatgreen.cloudapps.digital
+last uploaded: Tue Jul 7 10:12:43 UTC 2020
+stack: cflinuxfs3
+buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
+
+     state     since                    cpu    memory         disk           details
+#0   running   2020-07-07 11:14:10 AM   0.0%   43.7K of 8G    319.8M of 4G
+#1   running   2020-07-07 11:14:09 AM   0.0%   152.7M of 8G   457.8M of 4G
+#2   running   2020-07-07 11:14:09 AM   0.0%   39.8K of 8G    186.4M of 4G
+#3   running   2020-07-07 11:14:09 AM   0.0%   5.2M of 8G     457.8M of 4G
+#4   running   2020-07-07 11:14:10 AM   0.0%   77.8M of 8G    457.8M of 4G
+#5   running   2020-07-07 11:14:09 AM   0.0%   35.8K of 8G    130.1M of 4G
+#6   running   2020-07-07 11:14:09 AM   0.0%   39.8K of 8G    412.9M of 4G
+#7   running   2020-07-07 11:14:09 AM   0.0%   153.2M of 8G   457.8M of 4G
+#8   running   2020-07-07 11:14:09 AM   0.0%   152.2M of 8G   457.8M of 4G
+#9   running   2020-07-07 11:14:09 AM   0.0%   154M of 8G     457.8M of 4G
+11:14:46.66: Push application to sfcuatgreen completed
+-------------------------------------------
+11:14:48.18: Create Draft Release on Github
+-------------------------------------------
+11:37:56.38: Publish Release 6.2 completed
+11:37:58.14: PREPROD MENU: Options 1-7 completed
