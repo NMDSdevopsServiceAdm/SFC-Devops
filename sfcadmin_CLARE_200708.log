@@ -2,3 +2,671 @@
 Starting SFCADMIN on 08/07/2020 at 14:59:26.15
 ----------------------------------------------
  
+==================================================================================================
+15:00:15.69: PREPROD MENU: A selected to run all options....
+-----------------------------------------
+15:00:17.15: Do npm install and run build
+-----------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/common@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/platform-browser@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/animations@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/router@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN @testing-library/angular@8.2.0 requires a peer of @angular/core@^8.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN angulartics2@7.5.2 requires a peer of @angular/common@>=6.0.0 <9.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN angulartics2@7.5.2 requires a peer of @angular/core@>=6.0.0 <9.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\watchpack-chokidar2\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+removed 13 packages and audited 2865 packages in 23.884s
+
+69 packages are looking for funding
+  run `npm fund` for details
+
+found 355 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> ng-sfc-v2@0.0.1 build:prod C:\development\skills-for-care\Deploy-SopraSteria-SFC
+> npm run build:clean && ng build --extract-css --prod
+
+
+> ng-sfc-v2@0.0.1 build:clean C:\development\skills-for-care\Deploy-SopraSteria-SFC
+> rimraf dist
+
+
+chunk {} common.bc534afdf01ddfccb1d7.js (common) 14 kB  [rendered]
+chunk {1} 1.a930d30538ea7f687c3e.js () 39.7 kB  [rendered]
+chunk {2} runtime.115f941a1ea72c4e5460.js (runtime) 2.56 kB [entry] [rendered]
+chunk {3} 3.15f6adb1957e52f6b97d.js () 22.2 kB  [rendered]
+chunk {4} 4.e9717e4e4c15f34f0a2d.js () 234 kB  [rendered]
+chunk {5} main.493225a0f577c9ccdb0f.js (main) 1.38 MB [initial] [rendered]
+chunk {6} polyfills.02430b3e14d8d0d69bc3.js (polyfills) 104 kB [initial] [rendered]
+chunk {7} polyfills-es5.ed1719be34efaddfef6f.js (polyfills-es5) 187 kB [initial] [rendered]
+chunk {8} styles.72004390dea3c5df7cff.css (styles) 116 kB [initial] [rendered]
+chunk {9} 9.8531ef5f49edc817f30a.js () 27.1 kB  [rendered]
+chunk {10} 10.5576ebb642a19fd04fe5.js () 173 kB  [rendered]
+chunk {11} 11.b99e8d6169af6655a728.js () 23.4 kB  [rendered]
+chunk {12} 12.b1e4dc23e45bb6128166.js () 26.7 kB  [rendered]
+chunk {13} 13.3f7cd4e895f6126247cc.js () 57.8 kB  [rendered]
+chunk {14} 14.359e7567bd249deb2edc.js () 62.3 kB  [rendered]
+chunk {15} 15.fd9b1099678b10590f98.js () 35.8 kB  [rendered]
+chunk {16} 16.a4c51e1cdf0431bf544c.js () 54.5 kB  [rendered]
+chunk {17} 17.406e88b91240a59f12c0.js () 66 kB  [rendered]
+chunk {18} 18.4f7822045f92e00d1681.js () 20.2 kB  [rendered]
+Date: 2020-07-08T14:04:55.009Z - Hash: 2a75bc891c6471f830cb - Time: 210490ms
+
+
+15:04:57.19: npm install and run build completed
+------------------------------------------------------------------
+15:04:59.15: Update database binding for sfcuatgreen to sfcuatdb02
+------------------------------------------------------------------
+15:05:01.21: Current binding for sfcuatgreen already sfcuatdb02
+------------------------------------------
+15:05:03.17: Set variables for sfcuatgreen
+------------------------------------------
+15:09:49.95: Updating AWS Secrets for PREPROD/API
+15:15:55.64: Updating cf variables for sfcuatgreen
+15:16:05.62: Set variables for sfcuatgreen completed
+-----------------------------------------------------------
+15:16:07.18: Update manifest.bluegreen.yml with sfcuatgreen
+-----------------------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+15:16:29.29: Update manifest.bluegreen.yml with sfcuatgreen completed
+--------------------------------------------
+15:16:31.17: Push application to sfcuatgreen
+--------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+Latest commit:
+ 
+*   commit faecdf0fdbc27090e9d93db19713742aa22d62d3
+|\  Merge: e5febd2a b0ff6b94
+| | Author: Clare Sudbery <claresudbery@users.noreply.github.com>
+| | Date:   Wed Jul 8 14:57:28 2020 +0100
+| | 
+| |     Merge pull request #2308 from NMDSdevopsServiceAdm/test
+| |     
+| |     Test
+ 
+15:16:58.37: Checking if database patches to be applied to sfcuatdb02
+15:19:58.06: Running database script C:\development\skills-for-care\SFC-DB\UAT\Sprint7.patch.sql
+----------------------------------------------------------
+Script: C:\development\skills-for-care\SFC-DB\UAT\Sprint7.patch.sql
+----------------------------------------------------------
+ALTER TABLE cqc."User"
+ADD "LaReportLockHeld" BOOLEAN  NOT NULL DEFAULT FALSE;
+ 
+----------------------------------------------------------
+Script output
+----------------------------------------------------------
+ALTER TABLE
+----------------------------------------------------------
+15:19:58.07: Completed C:\development\skills-for-care\SFC-DB\UAT\Sprint7.patch.sql
+15:21:15.49: Running database script C:\development\skills-for-care\SFC-DB\UAT\Sprint7.1.patch.sql
+----------------------------------------------------------
+Script: C:\development\skills-for-care\SFC-DB\UAT\Sprint7.1.patch.sql
+----------------------------------------------------------
+DROP FUNCTION IF EXISTS cqc.localauthorityreportadmin;
+create function cqc.localauthorityreportadmin(reportfrom date, reportto date)
+    returns TABLE("LocalAuthority" text, "WorkplaceName" text, "WorkplaceID" text, "PrimaryEstablishmentID" integer, "LastYearsConfirmedNumbers" integer, "LatestUpdate" date, "WorkplacesCompleted" bigint, "StaffCompleted" bigint, "NumberOfWorkplaces" bigint, "NumberOfWorkplacesCompleted" bigint, "CountEstablishmentType" bigint, "CountMainService" bigint, "CountServiceUserGroups" bigint, "CountCapacity" bigint, "CountUiltisation" bigint, "CountNumberOfStaff" bigint, "CountVacancies" bigint, "CountStarters" bigint, "CountLeavers" bigint, "SumStaff" bigint, "CountIndividualStaffRecords" bigint, "CountOfIndividualStaffRecordsNotAgency" bigint, "CountOfIndividualStaffRecordsNotAgencyComplete" bigint, "PercentageNotAgencyComplete" numeric, "CountOfIndividualStaffRecordsAgency" bigint, "CountOfIndividualStaffRecordsAgencyComplete" bigint, "PercentageAgencyComplete" numeric, "CountOfGender" bigint, "CountOfDateOfBirth" bigint, "CountOfEthnicity" bigint, "CountOfMainJobRole" bigint, "CountOfEmploymentStatus" bigint, "CountOfContractedAverageHours" bigint, "CountOfSickness" bigint, "CountOfPay" bigint, "CountOfQualification" bigint)
+    language plpgsql
+as
+$$
+DECLARE
+	success BOOLEAN;
+	v_error_msg TEXT;
+	v_error_stack TEXT;
+	AllLaEstablishments REFCURSOR;
+	CurrentEstablishment RECORD;
+BEGIN
+	success := true;
+
+	OPEN AllLaEstablishments FOR
+	SELECT MyLocalAuthorities."LocalAuthority", MyLocalAuthorities."NmdsID", "Establishment"."EstablishmentID", "LAEstablishment"."WorkplaceName", "LAEstablishment"."WorkplaceID"
+	FROM (
+		VALUES
+			('Barking & Dagenham','G100283', 409),
+			('Barnet','G109436', 327),
+			('Barnsley','J115228', 445),
+			('Bath and North East Somerset','D238068', 60),
+			('Bedford','I236353', 597),
+			('Bexley','G112580', 271),
+			('Birmingham','E200127', 1838),
+			('Blackburn with Darwen','F92383', 283),
+			('Blackpool','F194727', 652),
+			('Bolton','F134107', 684),
+			('Bracknell Forest','H114435', 314),
+			('Bradford','J139447', 1533),
+			('Brent','G233567', 355),
+			('Brighton & Hove','H102995', 857),
+			('Bristol','D231967', 1057),
+			('Bromley','G114788', 337),
+			('Buckinghamshire','H235947', 624),
+			('Bury','F105233', 539),
+			('Calderdale','J114267', 676),
+			('Cambridgeshire','I156828', 1035),
+			('Camden','G110402', 402),
+			('Central Bedfordshire','I174567', 626),
+			('Cheshire East','F227307', 1070),
+			('Cheshire West and Chester','F107121', 533),
+			('City of London','G232387', 19),
+			('Cornwall','D114992', 1037),
+			('Coventry','E178967', 845),
+			('Croydon','G158292', 705),
+			('Cumbria','F181827', 2627),
+			('Darlington','B10784', 204),
+			('Derby','C104755', 609),
+			('Derbyshire','C107021', 3714),
+			('Devon','D107716', 1327),
+			('Doncaster','J106920', 706),
+			('Dorset','D227879', 594),
+			('Dudley','E104880', 844),
+			('Durham','B104830', 807),
+			('Ealing','G251344', 444),
+			('East Riding of Yorkshire','J228012', 1179),
+			('East Sussex','H105090', 1603),
+			('Enfield','G174087', 221),
+			('Essex','I100769', 1120),
+			('Gateshead','B108334', 720),
+			('Gloucestershire','D51188', 1075),
+			('Greenwich','G231414', 490),
+			('Hackney','G122327', 576),
+			('Halton','F131587', 1096),
+			('Hammersmith & Fulham','G104757', 255),
+			('Hampshire','H228327', 3582),
+			('Haringey','G104471', 274),
+			('Harrow','G246107', 350),
+			('Hartlepool','B102671', 301),
+			('Havering','G247910', 251),
+			('Herefordshire','E141307', 277),
+			('Hertfordshire','I102895', 2214),
+			('Hillingdon','G102559', 336),
+			('Hounslow','G103425', 650),
+			('Isle of Wight','H129207', 667),
+			('Isles of Scilly','D233649', 31),
+			('Islington','G251598', 451),
+			('Kensington & Chelsea','G210367', 279),
+			('Kent','H108087', 3267),
+			('Kingston-upon-Hull','J233376', 836),
+			('Kingston-Upon-Thames','G173768', 166),
+			('Kirklees','J100346', 1268),
+			('Knowsley','F138807', 365),
+			('Lambeth','G107515', 495),
+			('Lancashire','F144667', 3744),
+			('Leeds','J206148', 1477),
+			('Leicester','C105021', 760),
+			('Leicestershire','C104324', 1239),
+			('Lewisham','G238960', 409),
+			('Lincolnshire','C235693', 723),
+			('Liverpool','F112420', 1100),
+			('Luton','I169167', 517),
+			('Manchester','F92068', 1940),
+			('Medway','H120367', 249),
+			('Merton','G179107', 320),
+			('Middlesbrough','B116107', 391),
+			('Milton Keynes','H104058', 662),
+			('Newcastle-upon-Tyne','B115867', 898),
+			('Newham','G247772', 418),
+			('Norfolk','I107881', 3002),
+			('North East Lincolnshire','J251291', 1),
+			('North Lincolnshire','J134007', 509),
+			('North Somerset','D115028', 323),
+			('North Tyneside','B136247', 529),
+			('North Yorkshire','J113547', 2423),
+			('Northamptonshire','C106716', 1438),
+			('Northumberland','B106802', 509),
+			('Nottingham','C100004', 1059),
+			('Nottinghamshire','C31061', 1894),
+			('Oldham','F92140', 251),
+			('Oxfordshire','H134847', 848),
+			('Peterborough','I161067', 202),
+			('Plymouth','D112677', 230),
+			('Bournemouth Christchurch and Poole','D51078', 767),
+			('Portsmouth','H123527', 739),
+			('Reading','H107691', 302),
+			('Redbridge','G102939', 375),
+			('Redcar & Cleveland','B103244', 368),
+			('Richmond-upon-Thames','G102074', 294),
+			('Rochdale','F92427', 389),
+			('Rotherham','J116648', 752),
+			('Rutland','C232251', 104),
+			('Salford','F105473', 180),
+			('Sandwell','E160467', 889),
+			('Sefton','F121567', 345),
+			('Sheffield','J109224', 1224),
+			('Shropshire','E245728', 687),
+			('Slough','H102664', 298),
+			('Solihull','E233120', 483),
+			('Somerset','D148447', 426),
+			('South Gloucestershire','D108414', 555),
+			('South Tyneside','B174687', 255),
+			('Southampton','H158538', 515),
+			('Southend-on-Sea','I174667', 244),
+			('Southwark','G166348', 455),
+			('St Helens','F105698', 699),
+			('Staffordshire','E109339', 684),
+			('Stockport','F92250', 656),
+			('Stockton-on-Tees','B117463', 591),
+			('Stoke-on-Trent','E100715', 719),
+			('Suffolk','I105347', 1242),
+			('Sunderland','B104660', 284),
+			('Surrey','H129567', 2403),
+			('Sutton','G106959', 239),
+			('Swindon','D109088', 494),
+			('Tameside','F108511', 643),
+			('Telford & Wrekin','E207567', 627),
+			('Thurrock','I125827', 579),
+			('Torbay','D253007', 17),
+			('Tower Hamlets','G106537', 454),
+			('Trafford','F112554', 441),
+			('Wakefield','J112649', 1005),
+			('Walsall','E122167', 395),
+			('Waltham Forest','G104057', 376),
+			('Wandsworth','G108652', 412),
+			('Warrington','F103037', 492),
+			('Warwickshire','E251688', 702),
+			('West Berkshire','H117047', 489),
+			('West Sussex','H237687', 1159),
+			('Westminster','G105680', 441),
+			('Wigan','B10756', 1181),
+			('Wiltshire','D119247', 640),
+			('Windsor & Maidenhead','H112607', 6),
+			('Wirral','F102294', 68),
+			('Wokingham','H106740', 88),
+			('Wolverhampton','E118530', 508),
+			('Worcestershire','E235582', 1045),
+			('York','J161268', 359),
+			('Wozziland', 'G1001020', 0),
+			('Wozziland2', 'G1001010', 0),
+			('Jackieland', 'J1001074', 111),
+			('Anniland', 'E1001272', 222)
+		) AS MyLocalAuthorities ("LocalAuthority", "NmdsID", "LastYears")
+			LEFT JOIN cqc."Establishment" on "Establishment"."NmdsID" = MyLocalAuthorities."NmdsID"
+			LEFT JOIN cqc."LocalAuthorityReportEstablishment" AS "LAEstablishment" on "LAEstablishment"."WorkplaceID" = MyLocalAuthorities."NmdsID";
+
+
+	-- first, run through and generate all Local Authority user reports - NOW
+	LOOP
+		FETCH AllLaEstablishments INTO CurrentEstablishment;
+		EXIT WHEN NOT FOUND;
+
+  		IF CurrentEstablishment."EstablishmentID" IS NOT NULL THEN
+  			PERFORM cqc.localAuthorityReport(CurrentEstablishment."EstablishmentID", reportFrom, reportTo);
+  		END IF;
+	END LOOP;
+
+	-- now report against all those generated user reports
+	RETURN QUERY SELECT
+		MyLocalAuthorities."LocalAuthority",
+		regexp_replace(LAEstablishments."WorkplaceName", ',', '', 'g') AS "WorkplaceName",
+		LAEstablishments."WorkplaceID",
+		LAEstablishments."EstablishmentFK" AS "PrimaryEstablishmentID",
+		MyLocalAuthorities."LastYears",	-- 5
+		CASE WHEN max(LAEstablishments2."LastUpdatedDate") > max(LAWorkers."LastUpdated") THEN max(LAEstablishments2."LastUpdatedDate") ELSE max(LAWorkers."LastUpdated") END AS "LatestUpdate",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."WorkplaceComplete" = true) AS "WorkplacesCompleted",
+		sum(LAWorkers."CountIndividualStaffRecordsCompleted")::BIGINT AS "StaffCompleted",
+		count(LAEstablishments2."WorkplaceID") AS "NumberOfWorkplaces",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."WorkplaceComplete" = true) AS "NumberOfWorkplacesCompleted",	-- 10
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE SUBSTRING(LAEstablishments2."EstablishmentType" from 1 for 15) = 'Local Authority') AS "CountEstablishmentType",
+		count(LAEstablishments2."WorkplaceID") AS  "CountMainService",			-- main service is mandatory
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."ServiceUserGroups" <> 'Missing') AS  "CountServiceUserGroups",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."CapacityOfMainService" <> 'Missing') AS  "CountCapacity",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."UtilisationOfMainService" <> 'Missing') AS  "CountUiltisation",	-- 15
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."NumberOfStaffRecords" <> 'Missing') AS  "CountNumberOfStaff",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."NumberOfVacancies" <> 'Missing') AS  "CountVacancies",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."NumberOfStarters" <> 'Missing') AS  "CountStarters",
+		count(LAEstablishments2."WorkplaceID") FILTER (WHERE LAEstablishments2."NumberOfLeavers" <> 'Missing') AS  "CountLeavers",
+		sum(LAEstablishments2."NumberOfStaffRecords"::INTEGER) FILTER (WHERE LAEstablishments2."NumberOfStaffRecords" <> 'Missing') AS  "SumStaff",	-- 20
+		sum(LAWorkers."CountIndividualStaffRecords")::BIGINT AS "CountIndividualStaffRecords",
+		sum(LAWorkers."CountOfIndividualStaffRecordsNotAgency")::BIGINT AS "CountOfIndividualStaffRecordsNotAgency",
+		sum(LAWorkers."CountOfIndividualStaffRecordsNotAgencyComplete")::BIGINT AS "CountOfIndividualStaffRecordsNotAgencyComplete",
+		sum(LAWorkers."PercentageNotAgencyComplete")::NUMERIC AS "PercentageNotAgencyComplete",
+		sum(LAWorkers."CountOfIndividualStaffRecordsAgency")::BIGINT AS "CountOfIndividualStaffRecordsAgency",	-- 25
+		sum(LAWorkers."CountOfIndividualStaffRecordsAgencyComplete")::BIGINT AS "CountOfIndividualStaffRecordsAgencyComplete",
+		sum(LAWorkers."PercentageAgencyComplete")::NUMERIC AS "PercentageAgencyComplete",
+		sum(LAWorkers."CountOfGender")::BIGINT AS "CountOfGender",
+		sum(LAWorkers."CountOfDateOfBirth")::BIGINT AS "CountOfDateOfBirth",
+		sum(LAWorkers."CountOfEthnicity")::BIGINT AS "CountOfEthnicity",	-- 30
+		sum(LAWorkers."CountOfMainJobRole")::BIGINT AS "CountOfMainJobRole",
+		sum(LAWorkers."CountOfEmploymentStatus")::BIGINT AS "CountOfEmploymentStatus",
+		sum(LAWorkers."CountOfContractedAverageHours")::BIGINT AS "CountOfContractedAverageHours",
+		sum(LAWorkers."CountOfSickness")::BIGINT AS "CountOfSickness",
+		sum(LAWorkers."CountOfPay")::BIGINT AS "CountOfPay",	-- 35
+		sum(LAWorkers."CountOfQualification")::BIGINT AS "CountOfQualification"
+	FROM (
+		VALUES
+		('Barking & Dagenham','G100283', 409),
+        			('Barnet','G109436', 327),
+        			('Barnsley','J115228', 445),
+        			('Bath and North East Somerset','D238068', 60),
+        			('Bedford','I236353', 597),
+        			('Bexley','G112580', 271),
+        			('Birmingham','E200127', 1838),
+        			('Blackburn with Darwen','F92383', 283),
+        			('Blackpool','F194727', 652),
+        			('Bolton','F134107', 684),
+        			('Bracknell Forest','H114435', 314),
+        			('Bradford','J139447', 1533),
+        			('Brent','G233567', 355),
+        			('Brighton & Hove','H102995', 857),
+        			('Bristol','D231967', 1057),
+        			('Bromley','G114788', 337),
+        			('Buckinghamshire','H235947', 624),
+        			('Bury','F105233', 539),
+        			('Calderdale','J114267', 676),
+        			('Cambridgeshire','I156828', 1035),
+        			('Camden','G110402', 402),
+        			('Central Bedfordshire','I174567', 626),
+        			('Cheshire East','F227307', 1070),
+        			('Cheshire West and Chester','F107121', 533),
+        			('City of London','G232387', 19),
+        			('Cornwall','D114992', 1037),
+        			('Coventry','E178967', 845),
+        			('Croydon','G158292', 705),
+        			('Cumbria','F181827', 2627),
+        			('Darlington','B10784', 204),
+        			('Derby','C104755', 609),
+        			('Derbyshire','C107021', 3714),
+        			('Devon','D107716', 1327),
+        			('Doncaster','J106920', 706),
+        			('Dorset','D227879', 594),
+        			('Dudley','E104880', 844),
+        			('Durham','B104830', 807),
+        			('Ealing','G251344', 444),
+        			('East Riding of Yorkshire','J228012', 1179),
+        			('East Sussex','H105090', 1603),
+        			('Enfield','G174087', 221),
+        			('Essex','I100769', 1120),
+        			('Gateshead','B108334', 720),
+        			('Gloucestershire','D51188', 1075),
+        			('Greenwich','G231414', 490),
+        			('Hackney','G122327', 576),
+        			('Halton','F131587', 1096),
+        			('Hammersmith & Fulham','G104757', 255),
+        			('Hampshire','H228327', 3582),
+        			('Haringey','G104471', 274),
+        			('Harrow','G246107', 350),
+        			('Hartlepool','B102671', 301),
+        			('Havering','G247910', 251),
+        			('Herefordshire','E141307', 277),
+        			('Hertfordshire','I102895', 2214),
+        			('Hillingdon','G102559', 336),
+        			('Hounslow','G103425', 650),
+        			('Isle of Wight','H129207', 667),
+        			('Isles of Scilly','D233649', 31),
+        			('Islington','G251598', 451),
+        			('Kensington & Chelsea','G210367', 279),
+        			('Kent','H108087', 3267),
+        			('Kingston-upon-Hull','J233376', 836),
+        			('Kingston-Upon-Thames','G173768', 166),
+        			('Kirklees','J100346', 1268),
+        			('Knowsley','F138807', 365),
+        			('Lambeth','G107515', 495),
+        			('Lancashire','F144667', 3744),
+        			('Leeds','J206148', 1477),
+        			('Leicester','C105021', 760),
+        			('Leicestershire','C104324', 1239),
+        			('Lewisham','G238960', 409),
+        			('Lincolnshire','C235693', 723),
+        			('Liverpool','F112420', 1100),
+        			('Luton','I169167', 517),
+        			('Manchester','F92068', 1940),
+        			('Medway','H120367', 249),
+        			('Merton','G179107', 320),
+        			('Middlesbrough','B116107', 391),
+        			('Milton Keynes','H104058', 662),
+        			('Newcastle-upon-Tyne','B115867', 898),
+        			('Newham','G247772', 418),
+        			('Norfolk','I107881', 3002),
+        			('North East Lincolnshire','J251291', 1),
+        			('North Lincolnshire','J134007', 509),
+        			('North Somerset','D115028', 323),
+        			('North Tyneside','B136247', 529),
+        			('North Yorkshire','J113547', 2423),
+        			('Northamptonshire','C106716', 1438),
+        			('Northumberland','B106802', 509),
+        			('Nottingham','C100004', 1059),
+        			('Nottinghamshire','C31061', 1894),
+        			('Oldham','F92140', 251),
+        			('Oxfordshire','H134847', 848),
+        			('Peterborough','I161067', 202),
+        			('Plymouth','D112677', 230),
+        			('Bournemouth Christchurch and Poole','D51078', 767),
+        			('Portsmouth','H123527', 739),
+        			('Reading','H107691', 302),
+        			('Redbridge','G102939', 375),
+        			('Redcar & Cleveland','B103244', 368),
+        			('Richmond-upon-Thames','G102074', 294),
+        			('Rochdale','F92427', 389),
+        			('Rotherham','J116648', 752),
+        			('Rutland','C232251', 104),
+        			('Salford','F105473', 180),
+        			('Sandwell','E160467', 889),
+        			('Sefton','F121567', 345),
+        			('Sheffield','J109224', 1224),
+        			('Shropshire','E245728', 687),
+        			('Slough','H102664', 298),
+        			('Solihull','E233120', 483),
+        			('Somerset','D148447', 426),
+        			('South Gloucestershire','D108414', 555),
+        			('South Tyneside','B174687', 255),
+        			('Southampton','H158538', 515),
+        			('Southend-on-Sea','I174667', 244),
+        			('Southwark','G166348', 455),
+        			('St Helens','F105698', 699),
+        			('Staffordshire','E109339', 684),
+        			('Stockport','F92250', 656),
+        			('Stockton-on-Tees','B117463', 591),
+        			('Stoke-on-Trent','E100715', 719),
+        			('Suffolk','I105347', 1242),
+        			('Sunderland','B104660', 284),
+        			('Surrey','H129567', 2403),
+        			('Sutton','G106959', 239),
+        			('Swindon','D109088', 494),
+        			('Tameside','F108511', 643),
+        			('Telford & Wrekin','E207567', 627),
+        			('Thurrock','I125827', 579),
+        			('Torbay','D253007', 17),
+        			('Tower Hamlets','G106537', 454),
+        			('Trafford','F112554', 441),
+        			('Wakefield','J112649', 1005),
+        			('Walsall','E122167', 395),
+        			('Waltham Forest','G104057', 376),
+        			('Wandsworth','G108652', 412),
+        			('Warrington','F103037', 492),
+        			('Warwickshire','E251688', 702),
+        			('West Berkshire','H117047', 489),
+        			('West Sussex','H237687', 1159),
+        			('Westminster','G105680', 441),
+        			('Wigan','B10756', 1181),
+        			('Wiltshire','D119247', 640),
+        			('Windsor & Maidenhead','H112607', 6),
+        			('Wirral','F102294', 68),
+        			('Wokingham','H106740', 88),
+        			('Wolverhampton','E118530', 508),
+        			('Worcestershire','E235582', 1045),
+        			('York','J161268', 359),
+        			('Wozziland', 'G1001020', 0),
+        			('Wozziland2', 'G1001010', 0),
+        			('Jackieland', 'J1001074', 111),
+        			('Anniland', 'E1001272', 222)
+		) AS MyLocalAuthorities ("LocalAuthority", "NmdsID", "LastYears")
+	INNER JOIN cqc."LocalAuthorityReportEstablishment" LAEstablishments on LAEstablishments."WorkplaceID" = MyLocalAuthorities."NmdsID"
+	INNER JOIN cqc."LocalAuthorityReportEstablishment" LAEstablishments2 on LAEstablishments2."EstablishmentFK" = LAEstablishments."EstablishmentFK"
+	LEFT JOIN (
+		SELECT
+			"WorkplaceFK",
+			max("LastUpdated") AS "LastUpdated",
+			count(LAWorkers2."MainJob") AS  "CountIndividualStaffRecords",
+			count(LAWorkers2."MainJob") FILTER (WHERE LAWorkers2."StaffRecordComplete" = true)  AS  "CountIndividualStaffRecordsCompleted",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."EmploymentStatus" <> 'Agency') AS  "CountOfIndividualStaffRecordsNotAgency",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."EmploymentStatus" <> 'Agency' AND LAWorkers2."StaffRecordComplete" = true) AS  "CountOfIndividualStaffRecordsNotAgencyComplete",
+			0.00::NUMERIC AS "PercentageNotAgencyComplete",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."EmploymentStatus" = 'Agency') AS  "CountOfIndividualStaffRecordsAgency",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."EmploymentStatus" = 'Agency'  AND LAWorkers2."StaffRecordComplete" = true) AS  "CountOfIndividualStaffRecordsAgencyComplete",
+			0.00::NUMERIC AS "PercentageAgencyComplete",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."Gender" <> 'Missing') AS  "CountOfGender",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."DateOfBirth" <> 'Missing') AS  "CountOfDateOfBirth",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."Ethnicity" <> 'Missing') AS  "CountOfEthnicity",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."MainJob" <> 'Missing') AS  "CountOfMainJobRole",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."EmploymentStatus" <> 'Missing') AS  "CountOfEmploymentStatus",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."ContractedAverageHours" <> 'Missing') AS  "CountOfContractedAverageHours",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."SickDays" <> 'Missing') AS  "CountOfSickness",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."PayInterval" <> 'Missing' AND LAWorkers2."RateOfPay" <> 'Missing') AS  "CountOfPay",
+			count(LAWorkers2."EmploymentStatus") FILTER (WHERE LAWorkers2."RelevantSocialCareQualification" <> 'Missing' AND LAWorkers2."HighestSocialCareQualification" <> 'Missing' AND LAWorkers2."NonSocialCareQualification" <> 'Missing') AS  "CountOfQualification"
+		FROM cqc."LocalAuthorityReportWorker" LAWorkers2
+		group by LAWorkers2."WorkplaceFK"
+	) LAWorkers ON LAWorkers."WorkplaceFK" = LAEstablishments2."WorkplaceFK"
+	GROUP BY
+ 		MyLocalAuthorities."LocalAuthority",
+ 		LAEstablishments."WorkplaceName",
+ 		LAEstablishments."WorkplaceID",
+ 		LAEstablishments."EstablishmentFK",
+		MyLocalAuthorities."LastYears"
+	ORDER BY MyLocalAuthorities."LocalAuthority", LAEstablishments."WorkplaceName";
+
+END;
+$$;
+
+alter function cqc.localauthorityreportadmin(date, date) owner to sfcadmin;
+
+ 
+----------------------------------------------------------
+Script output
+----------------------------------------------------------
+DROP FUNCTION
+CREATE FUNCTION
+ERROR:  role "sfcadmin" does not exist
+----------------------------------------------------------
+15:21:15.49: Completed C:\development\skills-for-care\SFC-DB\UAT\Sprint7.1.patch.sql
+15:22:45.40: Database patches applied to sfcuatdb02
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Using manifest file C:\development\skills-for-care\Deploy-SopraSteria-SFC\manifest.bluegreen.yml
+
+
+Deprecation warning: Specifying app manifest attributes at the top level is deprecated. Found: stack.
+Please see https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#deprecated for alternatives and other app manifest deprecations. This feature will be removed in the future.
+
+
+Using manifest file manifest.bluegreen.yml
+
+Using stack cflinuxfs3...
+OK
+Updating app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Uploading sfcuatgreen...
+Uploading app files from: C:\development\skills-for-care\Deploy-SopraSteria-SFC
+Uploading 2.1M, 1745 files
+                             Done uploading
+OK
+
+Stopping app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Starting app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d creating container for instance f77f3b39-62ac-4eb6-bb1a-fdd95f869e5d
+Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d successfully created container for instance f77f3b39-62ac-4eb6-bb1a-fdd95f869e5d
+Downloading build artifacts cache...
+Downloading app package...
+Downloaded app package (2.7M)
+Downloaded build artifacts cache (107.1M)
+-----> Download go 1.9.1
+-----> Running go build supply
+-----> Nodejs Buildpack version 1.6.32
+-----> Installing binaries
+       engines.node (package.json): 10.10.0
+       engines.npm (package.json): 6.4.1
+-----> Installing node 10.10.0
+       Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+       npm 6.4.1 already installed with node
+-----> Installing yarn 1.9.4
+       Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+       Installed yarn 1.9.4
+-----> Creating runtime environment
+       [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+       Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+       NODE_OPTIONS=--max-old-space-size=8192
+       NODE_ENV=preproduction
+       NODE_HOME=/tmp/contents132648760/deps/0/node
+       NODE_MODULES_CACHE=true
+       NODE_VERBOSE=false
+       NPM_CONFIG_LOGLEVEL=error
+       NPM_CONFIG_PRODUCTION=true
+       npm scripts will see NODE_ENV=production (not 'preproduction')
+       https://docs.npmjs.com/misc/config#production
+-----> Building dependencies
+       Installing node modules (package.json + package-lock.json)
+> core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+added 622 packages from 614 contributors and audited 2865 packages in 15.793s
+found 355 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+-----> Running go build finalize
+Exit status 0
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (107.1M)
+Uploaded droplet (71.6M)
+Uploading complete
+Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d stopping instance f77f3b39-62ac-4eb6-bb1a-fdd95f869e5d
+Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d destroying container for instance f77f3b39-62ac-4eb6-bb1a-fdd95f869e5d
+Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d successfully destroyed container for instance f77f3b39-62ac-4eb6-bb1a-fdd95f869e5d
+
+3 of 10 instances running, 7 starting
+
+App started
+
+
+OK
+
+App sfcuatgreen was started using this command `npm start`
+
+Showing health and status for app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+requested state: started
+instances: 10/10
+usage: 8G x 10 instances
+urls: sfcuatgreen.cloudapps.digital
+last uploaded: Wed Jul 8 14:23:03 UTC 2020
+stack: cflinuxfs3
+buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
+
+     state      since                    cpu    memory         disk           details
+#0   running    2020-07-08 03:24:28 PM   0.0%   39.8K of 8G    8K of 4G
+#1   running    2020-07-08 03:24:28 PM   0.0%   39.8K of 8G    8K of 4G
+#2   running    2020-07-08 03:24:28 PM   0.4%   98.9M of 8G    457.8M of 4G
+#3   running    2020-07-08 03:24:28 PM   0.0%   43.7K of 8G    8K of 4G
+#4   running    2020-07-08 03:24:28 PM   0.0%   153.4M of 8G   414.4M of 4G
+#5   running    2020-07-08 03:24:28 PM   0.0%   153.5M of 8G   414.4M of 4G
+#6   running    2020-07-08 03:24:28 PM   0.0%   35.8K of 8G    8K of 4G
+#7   running    2020-07-08 03:24:28 PM   0.3%   121.7M of 8G   457.8M of 4G
+#8   starting   2020-07-08 03:24:17 PM   0.4%   109.8M of 8G   457.8M of 4G
+#9   running    2020-07-08 03:24:27 PM   0.4%   116.6M of 8G   457.8M of 4G
+15:24:39.27: Push application to sfcuatgreen completed
+-------------------------------------------
+15:24:41.15: Create Draft Release on Github
+-------------------------------------------
+15:31:05.36: Publish Release 7.1 completed
+15:31:07.11: PREPROD MENU: Options 1-7 completed
+==================================================================================================
+Starting SFCADMIN on 08/07/2020 at 16:39:15.51
+----------------------------------------------
+ 
