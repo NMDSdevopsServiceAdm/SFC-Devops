@@ -670,3 +670,368 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
 Starting SFCADMIN on 08/07/2020 at 16:39:15.51
 ----------------------------------------------
  
+==================================================================================================
+16:42:09.20: PROD MENU: S1 selected to run options 1-5....
+------------------------------------------------------------------
+16:42:11.16: Update database binding for sfcuatgreen to sfcuatdb01
+------------------------------------------------------------------
+Unbinding app sfcuatgreen from service sfcuatdb02 in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Binding service sfcuatdb01 to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+TIP: Use 'cf restage sfcuatgreen' to ensure your env variable changes take effect
+16:44:41.45: Update database binding for sfcuatgreen to sfcuatdb01 completed
+--------------------------------------------
+16:44:43.17: Restage application sfcuatgreen
+--------------------------------------------
+This action will cause app downtime.
+
+Restaging app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+
+Staging app and tracing logs...
+   Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d creating container for instance 10f8a7fc-d527-4fc6-b3bf-e7508ef2149d
+   Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d successfully created container for instance 10f8a7fc-d527-4fc6-b3bf-e7508ef2149d
+   Downloading app package...
+   Downloading build artifacts cache...
+   Downloaded app package (2.7M)
+   Downloaded build artifacts cache (107.1M)
+   -----> Download go 1.9.1
+   -----> Running go build supply
+   -----> Nodejs Buildpack version 1.6.32
+   -----> Installing binaries
+          engines.node (package.json): 10.10.0
+          engines.npm (package.json): 6.4.1
+   -----> Installing node 10.10.0
+          Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+          npm 6.4.1 already installed with node
+   -----> Installing yarn 1.9.4
+          Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+          Installed yarn 1.9.4
+   -----> Creating runtime environment
+          [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+          Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+          NODE_OPTIONS=--max-old-space-size=8192
+          NODE_ENV=preproduction
+          NODE_HOME=/tmp/contents034278423/deps/0/node
+          NODE_MODULES_CACHE=true
+          NODE_VERBOSE=false
+          NPM_CONFIG_LOGLEVEL=error
+          NPM_CONFIG_PRODUCTION=true
+          npm scripts will see NODE_ENV=production (not 'preproduction')
+          https://docs.npmjs.com/misc/config#production
+   -----> Building dependencies
+          Installing node modules (package.json + package-lock.json)
+   > core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+   > node -e "try{require('./postinstall')}catch(e){}"
+   added 622 packages from 614 contributors and audited 2865 packages in 15.409s
+   found 355 low severity vulnerabilities
+     run `npm audit fix` to fix them, or `npm audit` for details
+   -----> Running go build finalize
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (107.1M)
+   Uploaded droplet (71.6M)
+   Uploading complete
+   Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d stopping instance 10f8a7fc-d527-4fc6-b3bf-e7508ef2149d
+   Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d destroying container for instance 10f8a7fc-d527-4fc6-b3bf-e7508ef2149d
+   Cell 7a161029-2ed5-423b-be8c-4a09cfd1a27d successfully destroyed container for instance 10f8a7fc-d527-4fc6-b3bf-e7508ef2149d
+
+Waiting for app to start...
+
+name:              sfcuatgreen
+requested state:   started
+routes:            sfcuatgreen.cloudapps.digital
+last uploaded:     Wed 08 Jul 16:47:33 BST 2020
+stack:             cflinuxfs3
+buildpacks:        nodejs
+
+type:            web
+instances:       10/10
+memory usage:    8192M
+start command:   npm start
+     state     since                  cpu    memory         disk           details
+#0   running   2020-07-08T15:47:47Z   0.4%   88.4M of 8G    414.4M of 4G   
+#1   running   2020-07-08T15:47:47Z   0.0%   5.8M of 8G     414.4M of 4G   
+#2   running   2020-07-08T15:47:47Z   0.0%   39.8K of 8G    414.4M of 4G   
+#3   running   2020-07-08T15:47:47Z   0.0%   34.9M of 8G    414.4M of 4G   
+#4   running   2020-07-08T15:47:47Z   0.2%   105.8M of 8G   414.4M of 4G   
+#5   running   2020-07-08T15:47:47Z   0.3%   102.6M of 8G   414.4M of 4G   
+#6   running   2020-07-08T15:47:47Z   0.4%   86.6M of 8G    414.4M of 4G   
+#7   running   2020-07-08T15:47:47Z   0.0%   39.8K of 8G    305.2M of 4G   
+#8   running   2020-07-08T15:47:47Z   0.2%   90.9M of 8G    414.4M of 4G   
+#9   running   2020-07-08T15:47:47Z   0.2%   106.6M of 8G   414.4M of 4G   
+16:47:49.22: Restage application sfcuatgreen completed
+------------------------------------------
+16:47:51.49: Set variables for sfcuatgreen
+------------------------------------------
+16:49:46.82: Updating AWS Secrets for PROD/API
+16:51:29.61: Updating cf variables for sfcuatgreen
+16:51:37.06: Set variables for sfcuatgreen completed
+--------------------------------------------
+16:51:39.12: Restage application sfcuatgreen
+--------------------------------------------
+This action will cause app downtime.
+
+Restaging app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+
+Staging app and tracing logs...
+   Cell 711d7b54-88ec-4b4b-b371-fa81611acc40 creating container for instance 350f3625-df95-4796-a150-81f785164a99
+   Cell 711d7b54-88ec-4b4b-b371-fa81611acc40 successfully created container for instance 350f3625-df95-4796-a150-81f785164a99
+   Downloading app package...
+   Downloading build artifacts cache...
+   Downloaded app package (2.7M)
+   Downloaded build artifacts cache (107.1M)
+   -----> Download go 1.9.1
+   -----> Running go build supply
+   -----> Nodejs Buildpack version 1.6.32
+   -----> Installing binaries
+          engines.node (package.json): 10.10.0
+          engines.npm (package.json): 6.4.1
+   -----> Installing node 10.10.0
+          Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+          npm 6.4.1 already installed with node
+   -----> Installing yarn 1.9.4
+          Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+          Installed yarn 1.9.4
+   -----> Creating runtime environment
+          [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+          Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+          NODE_OPTIONS=--max-old-space-size=8192
+          NODE_ENV=production
+          NODE_HOME=/tmp/contents093980717/deps/0/node
+          NODE_MODULES_CACHE=true
+          NODE_VERBOSE=false
+          NPM_CONFIG_LOGLEVEL=error
+          NPM_CONFIG_PRODUCTION=true
+   -----> Building dependencies
+          Installing node modules (package.json + package-lock.json)
+   > core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+   > node -e "try{require('./postinstall')}catch(e){}"
+   added 622 packages from 614 contributors and audited 2865 packages in 15.444s
+   found 355 low severity vulnerabilities
+     run `npm audit fix` to fix them, or `npm audit` for details
+   -----> Running go build finalize
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (107.1M)
+   Uploaded droplet (71.6M)
+   Uploading complete
+   Cell 711d7b54-88ec-4b4b-b371-fa81611acc40 stopping instance 350f3625-df95-4796-a150-81f785164a99
+   Cell 711d7b54-88ec-4b4b-b371-fa81611acc40 destroying container for instance 350f3625-df95-4796-a150-81f785164a99
+   Cell 711d7b54-88ec-4b4b-b371-fa81611acc40 successfully destroyed container for instance 350f3625-df95-4796-a150-81f785164a99
+
+Waiting for app to start...
+
+name:              sfcuatgreen
+requested state:   started
+routes:            sfcuatgreen.cloudapps.digital
+last uploaded:     Wed 08 Jul 16:52:41 BST 2020
+stack:             cflinuxfs3
+buildpacks:        nodejs
+
+type:            web
+instances:       10/10
+memory usage:    8192M
+start command:   npm start
+     state     since                  cpu    memory         disk           details
+#0   running   2020-07-08T15:52:59Z   0.0%   35.8K of 8G    8K of 4G       
+#1   running   2020-07-08T15:52:58Z   0.0%   153.1M of 8G   414.4M of 4G   
+#2   running   2020-07-08T15:52:58Z   0.0%   152.3M of 8G   414.4M of 4G   
+#3   running   2020-07-08T15:52:58Z   0.0%   39.8K of 8G    8K of 4G       
+#4   running   2020-07-08T15:52:59Z   0.0%   39.8K of 8G    186.6M of 4G   
+#5   running   2020-07-08T15:52:58Z   0.0%   43.7K of 8G    8K of 4G       
+#6   running   2020-07-08T15:52:58Z   0.0%   152.3M of 8G   414.4M of 4G   
+#7   running   2020-07-08T15:52:58Z   0.0%   152.4M of 8G   414.4M of 4G   
+#8   running   2020-07-08T15:52:57Z   0.1%   73.4M of 8G    414.4M of 4G   
+#9   running   2020-07-08T15:52:59Z   0.0%   43.7K of 8G    8K of 4G       
+16:57:08.53: Restage application sfcuatgreen completed
+-----------------------------------------
+16:57:10.22: Stop application sfcuatgreen
+-----------------------------------------
+Stopping app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+17:18:57.18: Stop application sfcuatgreen completed
+17:18:59.14: PROD MENU: Options 1-5 completed
+==================================================================================================
+17:19:11.68: PROD MENU: S2 selected to run options 6-14....
+--------------------------------------------------------
+17:19:13.13: Update sfcoffline html page - date and time
+--------------------------------------------------------
+17:19:50.59: Update sfcoffline html page - date and time completed
+----------------------------------------------------
+17:19:52.18: Check current users on Google Analytics
+----------------------------------------------------
+17:19:57.36: Check current users on Google Analytics completed
+-------------------------------------
+17:19:59.14: Push offline application
+-------------------------------------
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Using manifest file C:\development\skills-for-care\SFC-Offline\manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                sfcoffline
+  path:                C:\development\skills-for-care\SFC-Offline
+  buildpacks:
+    https://github.com/cloudfoundry/staticfile-buildpack.git
+  command:             $HOME/boot.sh
+  disk quota:          1G
+  health check type:   port
+  instances:           1
+  memory:              1G
+  stack:               cflinuxfs3
+  routes:
+    sfcoffline.cloudapps.digital
+
+Updating app sfcoffline...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 919 B    0.00% 919 B / 919 B  100.00% 919 B / 919 B  100.00% 919 B / 919 B  100.00% 919 B / 919 B  100.00% 919 B / 919 B  100.00% 919 B / 919 B  100.00% 1s
+
+Waiting for API to complete processing files...
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 creating container for instance e7bb7891-e9f3-49bd-9160-05ba39635344
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 successfully created container for instance e7bb7891-e9f3-49bd-9160-05ba39635344
+   Downloading app package...
+   Downloading build artifacts cache...
+   Downloaded app package (919B)
+   Downloaded build artifacts cache (2M)
+   -----> Download go 1.12.4
+   -----> Running go build supply
+   /tmp/buildpackdownloads/49e489d3547d6eb82fdd6227f8309290 ~
+   ~
+   -----> Staticfile Buildpack version 1.5.8
+          [31;1m**WARNING**[0m buildpack version changed from 1.5.7 to 1.5.8
+   -----> Installing nginx
+          Using nginx version 1.17.10
+   -----> Installing nginx 1.17.10
+          Copy [/tmp/cache/final/dependencies/9d0e3e32d05f770cc90826acd3dcd3a5e8aa5f2f327670a11638d2655150ce52/nginx-static_1.17.10_linux_x64_cflinuxfs3_f2c99636.tgz]
+          [31;1m**WARNING**[0m nginx 1.17.x will no longer be available in new buildpacks released after 2020-05-01.
+          See: https://nginx.org/
+   -----> Running go build finalize
+   /tmp/buildpackdownloads/49e489d3547d6eb82fdd6227f8309290 ~
+   ~
+   -----> Enabling custom pages for status_codes
+   -----> Root folder /tmp/app
+   -----> Copying project files into public
+   -----> Configuring nginx
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (2M)
+   Uploaded droplet (2M)
+   Uploading complete
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 stopping instance e7bb7891-e9f3-49bd-9160-05ba39635344
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 destroying container for instance e7bb7891-e9f3-49bd-9160-05ba39635344
+   Cell 654e3da8-9bf6-4dd6-90ca-4edbf321e764 successfully destroyed container for instance e7bb7891-e9f3-49bd-9160-05ba39635344
+
+Waiting for app to start...
+
+name:              sfcoffline
+requested state:   started
+routes:            sfcoffline.cloudapps.digital
+last uploaded:     Wed 08 Jul 17:20:52 BST 2020
+stack:             cflinuxfs3
+buildpacks:        staticfile
+
+type:            web
+instances:       1/1
+memory usage:    1024M
+start command:   $HOME/boot.sh
+     state     since                  cpu    memory    disk      details
+#0   running   2020-07-08T16:21:03Z   0.0%   0 of 1G   0 of 1G   
+
+17:21:10.85: Push offline application completed
+-----------------------------------------------------
+17:21:12.13: Switch route from sfcuatblue to offline
+-----------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+17:21:30.34: Switch route from sfcuatblue to offline completed
+---------------------------------------------------
+17:21:32.21: Stop sfcuatblue and start sfcuatgreen
+---------------------------------------------------
+Stopping app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+17:21:53.15: Checking if database patches to be applied to sfcuatdb01
+Starting app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+
+Waiting for app to start...
+
+name:              sfcuatgreen
+requested state:   started
+routes:            sfcuatgreen.cloudapps.digital
+last uploaded:     Wed 08 Jul 16:52:41 BST 2020
+stack:             cflinuxfs3
+buildpacks:        nodejs
+
+type:            web
+instances:       8/10
+memory usage:    8192M
+start command:   npm start
+     state      since                  cpu    memory         disk           details
+#0   running    2020-07-08T16:22:20Z   0.0%   152.9M of 8G   414.4M of 4G   
+#1   running    2020-07-08T16:22:20Z   0.0%   43.7K of 8G    8K of 4G       
+#2   running    2020-07-08T16:22:20Z   0.0%   39.8K of 8G    31.9M of 4G    
+#3   starting   2020-07-08T16:22:09Z   0.0%   0 of 8G        0 of 4G        
+#4   starting   2020-07-08T16:22:09Z   0.0%   0 of 8G        0 of 4G        
+#5   running    2020-07-08T16:22:20Z   0.0%   150.4M of 8G   414.4M of 4G   
+#6   running    2020-07-08T16:22:21Z   0.0%   81.8M of 8G    414.4M of 4G   
+#7   running    2020-07-08T16:22:21Z   0.0%   39.8K of 8G    8K of 4G       
+#8   running    2020-07-08T16:22:21Z   0.0%   43.7K of 8G    8K of 4G       
+#9   running    2020-07-08T16:22:20Z   0.0%   39.8K of 8G    52.2M of 4G    
+17:23:01.75: Stop sfcuatblue and start sfcuatgreen completed
+--------------------------------------------------------
+17:23:03.13: Switch Route from sfcoffline to sfcuatgreen
+--------------------------------------------------------
+Creating route sfcuat.cloudapps.digital for org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Route sfcuat.cloudapps.digital already exists
+Adding route sfcuat.cloudapps.digital to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Creating route asc-wds.skillsforcare.org.uk for org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Route asc-wds.skillsforcare.org.uk already exists
+Adding route asc-wds.skillsforcare.org.uk to app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Removing route sfcuat.cloudapps.digital from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+Removing route asc-wds.skillsforcare.org.uk from app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+17:24:15.89: Switch Route from sfcoffline to sfcuatgreen completed
+----------------------------
+17:24:17.18: Stop sfcoffline
+----------------------------
+Stopping app sfcoffline in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+17:25:35.15: Stop sfcoffline completed
+------------------------------------------------------------
+17:25:37.12: Remove Route cloudapps.digital from sfcuatgreen
+------------------------------------------------------------
+Removing route sfcuatgreen.cloudapps.digital from app sfcuatgreen in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+17:26:05.18: Remove Route cloudapps.digital from sfcuatgreen completed
+--------------------------------------
+17:26:07.16: Publish Release to Github
+--------------------------------------
+17:26:14.25: Publish Release completed
+17:26:16.11: PROD MENU: Options 6-14 completed
