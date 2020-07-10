@@ -2,3 +2,245 @@
 Starting SFCADMIN on 10/07/2020 at 12:09:15.03
 ----------------------------------------------
  
+==================================================================================================
+12:09:52.49: PREPROD MENU: P selected to run options 2-6 to bring sfcuatblue up to live....
+------------------------------------------------------------------
+12:10:30.03: Update database binding for sfcuatblue  to sfcuatdb02
+------------------------------------------------------------------
+Unbinding app sfcuatblue from service sfcuatdb01 in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Binding service sfcuatdb02 to app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+TIP: Use 'cf restage sfcuatblue' to ensure your env variable changes take effect
+12:10:40.17: Update database binding for sfcuatblue to sfcuatdb02 completed
+--------------------------------------------
+12:10:42.14: Restage application  sfcuatblue
+--------------------------------------------
+This action will cause app downtime.
+
+Restaging app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+
+Staging app and tracing logs...
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 creating container for instance c69c9fa2-1cfb-4779-9018-77474c3940d4
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 successfully created container for instance c69c9fa2-1cfb-4779-9018-77474c3940d4
+   Downloading app package...
+   Downloading build artifacts cache...
+   Downloaded app package (2.7M)
+   Downloaded build artifacts cache (101.2M)
+   -----> Download go 1.9.1
+   -----> Running go build supply
+   -----> Nodejs Buildpack version 1.6.32
+   -----> Installing binaries
+          engines.node (package.json): 10.10.0
+          engines.npm (package.json): 6.4.1
+   -----> Installing node 10.10.0
+          Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+          npm 6.4.1 already installed with node
+   -----> Installing yarn 1.9.4
+          Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+          Installed yarn 1.9.4
+   -----> Creating runtime environment
+          [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+          Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+          NODE_ENV=production
+          NODE_HOME=/tmp/contents648991109/deps/0/node
+          NODE_MODULES_CACHE=true
+          NODE_VERBOSE=false
+          NPM_CONFIG_LOGLEVEL=error
+          NPM_CONFIG_PRODUCTION=true
+   -----> Building dependencies
+          Installing node modules (package.json + package-lock.json)
+   > core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+   > node -e "try{require('./postinstall')}catch(e){}"
+   added 569 packages from 592 contributors and audited 2829 packages in 24.645s
+   found 354 low severity vulnerabilities
+     run `npm audit fix` to fix them, or `npm audit` for details
+   -----> Running go build finalize
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (101.2M)
+   Uploaded droplet (72.6M)
+   Uploading complete
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 stopping instance c69c9fa2-1cfb-4779-9018-77474c3940d4
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 destroying container for instance c69c9fa2-1cfb-4779-9018-77474c3940d4
+   Cell 739b2a14-e543-49a5-9cfe-82e05dccb8a8 successfully destroyed container for instance c69c9fa2-1cfb-4779-9018-77474c3940d4
+
+Waiting for app to start...
+
+name:              sfcuatblue
+requested state:   started
+routes:            
+last uploaded:     Fri 10 Jul 12:11:58 BST 2020
+stack:             cflinuxfs3
+buildpacks:        nodejs
+
+type:            web
+instances:       2/10
+memory usage:    8192M
+start command:   npm start
+     state      since                  cpu    memory        disk           details
+#0   starting   2020-07-10T11:12:09Z   0.0%   0 of 8G       0 of 4G        
+#1   starting   2020-07-10T11:12:09Z   0.0%   44.7M of 8G   423.8M of 4G   
+#2   starting   2020-07-10T11:12:09Z   0.0%   0 of 8G       0 of 4G        
+#3   running    2020-07-10T11:12:19Z   0.0%   39.8K of 8G   8K of 4G       
+#4   starting   2020-07-10T11:12:09Z   0.0%   39.8K of 8G   8K of 4G       
+#5   starting   2020-07-10T11:12:09Z   0.0%   0 of 8G       0 of 4G        
+#6   running    2020-07-10T11:12:19Z   0.0%   0 of 8G       0 of 4G        
+#7   starting   2020-07-10T11:12:09Z   0.0%   0 of 8G       0 of 4G        
+#8   starting   2020-07-10T11:12:09Z   0.0%   0 of 8G       0 of 4G        
+#9   starting   2020-07-10T11:12:09Z   0.0%   0 of 8G       0 of 4G        
+12:12:21.18: Restage application sfcuatblue completed
+------------------------------------------
+12:12:23.16: Set variables for  sfcuatblue
+------------------------------------------
+12:12:39.81: Updating AWS Secrets for PREPROD/API
+12:14:04.02: Updating cf variables for  sfcuatblue
+12:14:11.82: Set variables for sfcuatblue completed
+-----------------------------------------------------------
+12:14:13.21: Update manifest.bluegreen.yml with  sfcuatblue
+-----------------------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+nothing to commit, working tree clean
+12:14:26.22: Update manifest.bluegreen.yml with sfcuatblue completed
+--------------------------------------------
+12:14:28.21: Push application to  sfcuatblue
+--------------------------------------------
+GIT status:
+On branch live
+Your branch is up to date with 'origin/live'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   manifest.bluegreen.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+12:14:34.40: Push application to sfcuatblue proceeding but current Branch is not clean
+Latest commit:
+ 
+* commit 3c6b466b34591e73b08592cbef2c2818f309a252
+| Author: Clare Sudbery <clareworking@claresudbery.co.uk>
+| Date:   Fri Jul 10 12:21:57 2020 +0100
+| 
+|     manifest updated during deployment
+ 
+12:22:23.98: Checking if database patches to be applied to sfcuatdb02
+Pushing from manifest to org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Using manifest file C:\development\skills-for-care\Deploy-SopraSteria-SFC\manifest.bluegreen.yml
+
+
+Deprecation warning: Specifying app manifest attributes at the top level is deprecated. Found: stack.
+Please see https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#deprecated for alternatives and other app manifest deprecations. This feature will be removed in the future.
+
+
+Using manifest file manifest.bluegreen.yml
+
+Using stack cflinuxfs3...
+OK
+Updating app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Using route sfcuatblue.cloudapps.digital
+Binding sfcuatblue.cloudapps.digital to sfcuatblue...
+OK
+
+Uploading sfcuatblue...
+Uploading app files from: C:\development\skills-for-care\Deploy-SopraSteria-SFC
+Uploading 1.5M, 1743 files
+                             Done uploading
+OK
+
+Stopping app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+Starting app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+Cell 87831ead-08d8-4b28-9767-661a06e17517 creating container for instance c71cc413-52d2-4fbe-8b77-fa9e3ba01f3c
+Cell 87831ead-08d8-4b28-9767-661a06e17517 successfully created container for instance c71cc413-52d2-4fbe-8b77-fa9e3ba01f3c
+Downloading app package...
+Downloading build artifacts cache...
+Downloaded app package (2.7M)
+Downloaded build artifacts cache (101.2M)
+-----> Download go 1.9.1
+-----> Running go build supply
+-----> Nodejs Buildpack version 1.6.32
+-----> Installing binaries
+       engines.node (package.json): 10.10.0
+       engines.npm (package.json): 6.4.1
+-----> Installing node 10.10.0
+       Copy [/tmp/cache/final/dependencies/934bf15bbe7ab9c391046954a0de5bb78e4467101b6876a3887632ef920c28a4/node-10.10.0-linux-x64-cflinuxfs3-721fa3f1.tgz]
+       npm 6.4.1 already installed with node
+-----> Installing yarn 1.9.4
+       Copy [/tmp/cache/final/dependencies/cc1e47168cd91f0aa164a9269c052cff998f9686183aaa8688e54545d8cdda4e/yarn-v1.9.4-7667eb71.tar.gz]
+       Installed yarn 1.9.4
+-----> Creating runtime environment
+       [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies
+       Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring
+       NODE_ENV=preproduction
+       NODE_HOME=/tmp/contents960037348/deps/0/node
+       NODE_MODULES_CACHE=true
+       NODE_VERBOSE=false
+       NPM_CONFIG_LOGLEVEL=error
+       NPM_CONFIG_PRODUCTION=true
+       npm scripts will see NODE_ENV=production (not 'preproduction')
+       https://docs.npmjs.com/misc/config#production
+-----> Building dependencies
+       Installing node modules (package.json + package-lock.json)
+> core-js@2.6.11 postinstall /tmp/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+added 622 packages from 614 contributors and audited 2865 packages in 17.754s
+found 355 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+-----> Running go build finalize
+Exit status 0
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (107.1M)
+Uploaded droplet (71.6M)
+Uploading complete
+Cell 87831ead-08d8-4b28-9767-661a06e17517 stopping instance c71cc413-52d2-4fbe-8b77-fa9e3ba01f3c
+Cell 87831ead-08d8-4b28-9767-661a06e17517 destroying container for instance c71cc413-52d2-4fbe-8b77-fa9e3ba01f3c
+Cell 87831ead-08d8-4b28-9767-661a06e17517 successfully destroyed container for instance c71cc413-52d2-4fbe-8b77-fa9e3ba01f3c
+
+0 of 10 instances running, 10 starting
+0 of 10 instances running, 10 starting
+10 of 10 instances running
+
+App started
+
+
+OK
+
+App sfcuatblue was started using this command `npm start`
+
+Showing health and status for app sfcuatblue in org dhsc-skills-for-care-nmds-sc-2 / space production as clare.sudbery@madetech.com...
+OK
+
+requested state: started
+instances: 10/10
+usage: 8G x 10 instances
+urls: sfcuatblue.cloudapps.digital
+last uploaded: Fri Jul 10 11:22:41 UTC 2020
+stack: cflinuxfs3
+buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.32
+
+     state     since                    cpu    memory         disk           details
+#0   running   2020-07-10 12:24:11 PM   0.0%   35.8K of 8G    368.7M of 4G
+#1   running   2020-07-10 12:24:11 PM   0.0%   152.8M of 8G   414.4M of 4G
+#2   running   2020-07-10 12:24:10 PM   0.0%   152.5M of 8G   414.4M of 4G
+#3   running   2020-07-10 12:24:10 PM   0.0%   39.8K of 8G    379.2M of 4G
+#4   running   2020-07-10 12:24:10 PM   0.0%   152.6M of 8G   414.4M of 4G
+#5   running   2020-07-10 12:24:11 PM   0.0%   76.3M of 8G    414.4M of 4G
+#6   running   2020-07-10 12:24:10 PM   0.0%   5.7M of 8G     414.4M of 4G
+#7   running   2020-07-10 12:24:13 PM   0.0%   39.8K of 8G    8K of 4G
+#8   running   2020-07-10 12:24:11 PM   0.0%   39.8K of 8G    242.2M of 4G
+#9   running   2020-07-10 12:24:11 PM   0.0%   155.8M of 8G   414.4M of 4G
+12:30:56.21: Push application to sfcuatblue completed
+12:30:58.16: PREPROD MENU: Options 2-6 completed
